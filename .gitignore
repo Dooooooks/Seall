@@ -26,6 +26,7 @@ captures/
 # ─── Signing Keystores & Credentials ─────────────
 *.jks
 *.keystore
+keystore.properties
 google-services.json
 
 # ─── OS-specific files ────────────────────────────
