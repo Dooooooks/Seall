@@ -136,8 +136,9 @@ fun HomeTab(
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onBackground
                     )
+                    val totalItems = orders.sumOf { it.totalItemCount }
                     Text(
-                        text = "${orders.size} orders",
+                        text = if (totalItems > 0 && orders.isNotEmpty()) "${orders.size} orders • $totalItems items" else "${orders.size} orders",
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )

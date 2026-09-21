@@ -3,15 +3,18 @@ package com.example.seall.data.repository
 import com.example.seall.data.local.IngredientDao
 import com.example.seall.data.local.OrderDao
 import com.example.seall.data.local.StockDao
+import com.example.seall.data.local.StockIngredientDao
 import com.example.seall.data.model.Ingredient
 import com.example.seall.data.model.Order
+import com.example.seall.data.model.StockIngredient
 import com.example.seall.data.model.StockItem
 import kotlinx.coroutines.flow.Flow
 
 class OrderRepository(
     private val orderDao: OrderDao,
     private val stockDao: StockDao,
-    private val ingredientDao: IngredientDao
+    private val ingredientDao: IngredientDao,
+    private val stockIngredientDao: StockIngredientDao
 ) {
 
     val allOrders: Flow<List<Order>> = orderDao.getAllOrders()
@@ -32,7 +35,25 @@ class OrderRepository(
 
     suspend fun deleteStockById(id: Long) = stockDao.deleteStockById(id)
 
-    // Ingredients
+    // Stock Ingredients (Recipe per stock product)
+    val allStockIngredients: Flow<List<StockIngredient>> = stockIngredientDao.getAllStockIngredients()
+
+    fun getStockIngredientsForStock(stockId: Long): Flow<List<StockIngredient>> =
+        stockIngredientDao.getIngredientsForStock(stockId)
+
+    suspend fun insertStockIngredient(ingredient: StockIngredient): Long =
+        stockIngredientDao.insertStockIngredient(ingredient)
+
+    suspend fun updateStockIngredient(ingredient: StockIngredient) =
+        stockIngredientDao.updateStockIngredient(ingredient)
+
+    suspend fun deleteStockIngredient(ingredient: StockIngredient) =
+        stockIngredientDao.deleteStockIngredient(ingredient)
+
+    suspend fun deleteIngredientsForStock(stockId: Long) =
+        stockIngredientDao.deleteIngredientsForStock(stockId)
+
+    // General Expenses / Ingredients
     val allIngredients: Flow<List<Ingredient>> = ingredientDao.getAllIngredients()
 
     fun getIngredientsByDateRange(startTime: Long, endTime: Long): Flow<List<Ingredient>> =

@@ -162,6 +162,10 @@ fun DashboardTab(
         }
     }
 
+    val totalItemsSold = remember(displayOrders) {
+        displayOrders.sumOf { it.totalItemCount }
+    }
+
     val totalIngredientsCost = remember(displayIngredients) {
         displayIngredients.sumOf { it.price }
     }
@@ -256,7 +260,7 @@ fun DashboardTab(
                     value = String.format(Locale.US, "₱%.2f", totalEarnings),
                     icon = Icons.Default.Savings,
                     accentColor = if (totalEarnings >= 0) SeallPaidGreen else MaterialTheme.colorScheme.error,
-                    subtitle = "Gross ₱${String.format(Locale.US, "%.2f", combinedTotal)} − Ingredients ₱${String.format(Locale.US, "%.2f", totalIngredientsCost)}"
+                    subtitle = "Gross ₱${String.format(Locale.US, "%.2f", combinedTotal)} ($totalItemsSold items) − Ingredients ₱${String.format(Locale.US, "%.2f", totalIngredientsCost)}"
                 )
 
                 Row(
@@ -640,6 +644,10 @@ private fun DebtorRowCard(
 ) {
     val dateFormat = SimpleDateFormat("MMM d, h:mm a", Locale.getDefault())
     val timeFormatted = dateFormat.format(Date(settlement.latestTimestamp))
+    val totalItemsCount = remember(settlement) { settlement.orders.sumOf { it.totalItemCount } }
+    val itemsOrderedSummary = remember(settlement) {
+        settlement.orders.mapNotNull { it.itemsSummary.takeIf { s -> s.isNotBlank() } }.joinToString(", ")
+    }
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -661,6 +669,18 @@ private fun DebtorRowCard(
                     color = MaterialTheme.colorScheme.onSurface,
                     fontWeight = FontWeight.SemiBold
                 )
+
+                if (itemsOrderedSummary.isNotBlank()) {
+                    Text(
+                        text = "$totalItemsCount items • $itemsOrderedSummary",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        fontSize = 11.sp,
+                        maxLines = 1,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                    )
+                }
+
                 Text(
                     text = if (settlement.orderCount > 1) {
                         "${settlement.orderCount} pending orders • Latest $timeFormatted"
@@ -668,8 +688,8 @@ private fun DebtorRowCard(
                         timeFormatted
                     },
                     style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    fontSize = 11.sp
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f),
+                    fontSize = 10.sp
                 )
             }
 

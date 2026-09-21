@@ -15,14 +15,15 @@ object CsvHelper {
     fun generateOrdersCsv(orders: List<Order>): String {
         val sb = StringBuilder()
         // Header
-        sb.append("ID,CustomerName,Price,IsPaid,Date,CreatedAt\n")
+        sb.append("ID,CustomerName,ItemsOrdered,TotalItemCount,Price,IsPaid,Date,CreatedAt\n")
 
         for (order in orders) {
             val escapedName = escapeCsv(order.customerName)
+            val escapedItems = escapeCsv(order.itemsSummary)
             val priceStr = String.format(Locale.US, "%.2f", order.price)
             val isPaidStr = if (order.isPaid) "PAID" else "UNPAID"
             val dateStr = dateFormat.format(Date(order.createdAt))
-            sb.append("${order.id},$escapedName,$priceStr,$isPaidStr,$dateStr,${order.createdAt}\n")
+            sb.append("${order.id},$escapedName,$escapedItems,${order.totalItemCount},$priceStr,$isPaidStr,$dateStr,${order.createdAt}\n")
         }
 
         return sb.toString()
@@ -40,6 +41,8 @@ object CsvHelper {
         val headers = parseCsvLine(headerLine).map { it.trim().lowercase(Locale.US) }
 
         val nameIdx = headers.indexOfFirst { it.contains("customer") || it.contains("name") }
+        val itemsIdx = headers.indexOfFirst { it.contains("itemsordered") || it.contains("items") || it.contains("item_list") }
+        val countIdx = headers.indexOfFirst { it.contains("totalitemcount") || it.contains("itemcount") || it.contains("quantity") || it.contains("count") }
         val priceIdx = headers.indexOfFirst { it.contains("price") || it.contains("amount") }
         val paidIdx = headers.indexOfFirst { it.contains("paid") || it.contains("status") }
         val createdIdx = headers.indexOfFirst { it.contains("createdat") || it.contains("timestamp") }
@@ -54,6 +57,8 @@ object CsvHelper {
 
             try {
                 val name = if (nameIdx in tokens.indices) tokens[nameIdx].trim() else "Customer"
+                val itemsSummary = if (itemsIdx in tokens.indices) tokens[itemsIdx].trim() else ""
+                val totalItemCount = if (countIdx in tokens.indices) tokens[countIdx].trim().toIntOrNull() ?: 1 else 1
                 val priceToken = if (priceIdx in tokens.indices) tokens[priceIdx].trim().replace("₱", "").replace(",", "") else "0.0"
                 val price = priceToken.toDoubleOrNull() ?: continue
                 if (price <= 0.0) continue
@@ -81,6 +86,8 @@ object CsvHelper {
                     Order(
                         id = 0, // Auto-generate new primary key to prevent collision
                         customerName = name.ifBlank { "Customer" },
+                        itemsSummary = itemsSummary,
+                        totalItemCount = totalItemCount,
                         price = price,
                         isPaid = isPaid,
                         createdAt = createdAt

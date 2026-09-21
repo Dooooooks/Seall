@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.seall.data.local.SeallDatabase
 import com.example.seall.data.model.Ingredient
 import com.example.seall.data.model.Order
+import com.example.seall.data.model.StockIngredient
 import com.example.seall.data.model.StockItem
 import com.example.seall.data.repository.OrderRepository
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -72,6 +73,13 @@ class OrderViewModel(
             initialValue = emptyList()
         )
 
+    val stockIngredients: StateFlow<List<StockIngredient>> = repository.allStockIngredients
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptyList()
+        )
+
     val ingredients: StateFlow<List<Ingredient>> = repository.allIngredients
         .stateIn(
             scope = viewModelScope,
@@ -104,14 +112,24 @@ class OrderViewModel(
         _editingOrder.value = null
     }
 
-    fun submitOrder(customerName: String, price: Double, isPaid: Boolean) {
+    fun submitOrder(
+        customerName: String,
+        price: Double,
+        isPaid: Boolean,
+        itemsSummary: String = "",
+        itemsJson: String = "",
+        totalItemCount: Int = 1
+    ) {
         viewModelScope.launch {
             val currentEdit = _editingOrder.value
             if (currentEdit != null) {
                 val updated = currentEdit.copy(
                     customerName = customerName.trim(),
                     price = price,
-                    isPaid = isPaid
+                    isPaid = isPaid,
+                    itemsSummary = if (itemsSummary.isNotBlank()) itemsSummary else currentEdit.itemsSummary,
+                    itemsJson = if (itemsJson.isNotBlank()) itemsJson else currentEdit.itemsJson,
+                    totalItemCount = if (itemsSummary.isNotBlank()) totalItemCount else currentEdit.totalItemCount
                 )
                 repository.updateOrder(updated)
             } else {
@@ -119,6 +137,9 @@ class OrderViewModel(
                     customerName = customerName.trim(),
                     price = price,
                     isPaid = isPaid,
+                    itemsSummary = itemsSummary,
+                    itemsJson = itemsJson,
+                    totalItemCount = totalItemCount,
                     createdAt = System.currentTimeMillis()
                 )
                 repository.insertOrder(newOrder)
@@ -168,21 +189,34 @@ class OrderViewModel(
     }
 
     // Stocks Management
-    fun addStock(name: String, price: Double) {
+    fun addStock(name: String, price: Double, quantity: Int = 0) {
         val trimmed = name.trim()
         if (trimmed.isNotBlank() && price > 0.0) {
             viewModelScope.launch {
-                repository.insertStock(StockItem(name = trimmed, price = price))
+                repository.insertStock(StockItem(name = trimmed, price = price, quantity = maxOf(0, quantity)))
             }
         }
     }
 
-    fun updateStock(stock: StockItem, name: String, price: Double) {
+    fun updateStock(stock: StockItem, name: String, price: Double, quantity: Int = stock.quantity) {
         val trimmed = name.trim()
         if (trimmed.isNotBlank() && price > 0.0) {
             viewModelScope.launch {
-                repository.updateStock(stock.copy(name = trimmed, price = price))
+                repository.updateStock(stock.copy(name = trimmed, price = price, quantity = maxOf(0, quantity)))
             }
+        }
+    }
+
+    fun updateStockQuantity(stock: StockItem, quantity: Int) {
+        viewModelScope.launch {
+            repository.updateStock(stock.copy(quantity = maxOf(0, quantity)))
+        }
+    }
+
+    fun adjustStockQuantity(stock: StockItem, delta: Int) {
+        val newQuantity = maxOf(0, stock.quantity + delta)
+        viewModelScope.launch {
+            repository.updateStock(stock.copy(quantity = newQuantity))
         }
     }
 
@@ -192,7 +226,47 @@ class OrderViewModel(
         }
     }
 
-    // Ingredients Management
+    // Stock Ingredients (Recipe per Stock Item)
+    fun addStockIngredient(stockId: Long, name: String, quantity: String, cost: Double = 0.0) {
+        val trimmedName = name.trim()
+        val trimmedQty = quantity.trim().ifBlank { "1" }
+        if (trimmedName.isNotBlank()) {
+            viewModelScope.launch {
+                repository.insertStockIngredient(
+                    StockIngredient(
+                        stockId = stockId,
+                        name = trimmedName,
+                        quantity = trimmedQty,
+                        cost = cost
+                    )
+                )
+            }
+        }
+    }
+
+    fun updateStockIngredient(ingredient: StockIngredient, name: String, quantity: String, cost: Double) {
+        val trimmedName = name.trim()
+        val trimmedQty = quantity.trim().ifBlank { "1" }
+        if (trimmedName.isNotBlank()) {
+            viewModelScope.launch {
+                repository.updateStockIngredient(
+                    ingredient.copy(
+                        name = trimmedName,
+                        quantity = trimmedQty,
+                        cost = cost
+                    )
+                )
+            }
+        }
+    }
+
+    fun deleteStockIngredient(ingredient: StockIngredient) {
+        viewModelScope.launch {
+            repository.deleteStockIngredient(ingredient)
+        }
+    }
+
+    // General Expenses / Ingredients Management
     fun addIngredient(name: String, price: Double) {
         val trimmed = name.trim()
         if (trimmed.isNotBlank() && price > 0.0) {
@@ -223,7 +297,12 @@ class OrderViewModel(
                 @Suppress("UNCHECKED_CAST")
                 override fun <T : ViewModel> create(modelClass: Class<T>): T {
                     val db = SeallDatabase.getInstance(application)
-                    val repo = OrderRepository(db.orderDao(), db.stockDao(), db.ingredientDao())
+                    val repo = OrderRepository(
+                        db.orderDao(),
+                        db.stockDao(),
+                        db.ingredientDao(),
+                        db.stockIngredientDao()
+                    )
                     return OrderViewModel(application, repo) as T
                 }
             }

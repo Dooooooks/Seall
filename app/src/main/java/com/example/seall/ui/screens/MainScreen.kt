@@ -69,6 +69,7 @@ fun MainScreen(
     val editingOrder by viewModel.editingOrder.collectAsState()
     val stocks by viewModel.stocks.collectAsState()
     val ingredients by viewModel.ingredients.collectAsState()
+    val stockIngredients by viewModel.stockIngredients.collectAsState()
 
     // Delete Confirmation Dialog
     orderToDelete?.let { order ->
@@ -100,8 +101,8 @@ fun MainScreen(
         editingOrder = editingOrder,
         stocks = stocks,
         onDismiss = { viewModel.closeWizard() },
-        onSubmit = { name, price, isPaid ->
-            viewModel.submitOrder(name, price, isPaid)
+        onSubmit = { name, price, isPaid, itemsSummary, itemsJson, totalItemCount ->
+            viewModel.submitOrder(name, price, isPaid, itemsSummary, itemsJson, totalItemCount)
         }
     )
 
@@ -243,13 +244,15 @@ fun MainScreen(
                 AppTab.STOCKS -> {
                     StocksTab(
                         stocks = stocks,
-                        ingredients = ingredients,
-                        onAddStock = { name, price -> viewModel.addStock(name, price) },
-                        onUpdateStock = { stock, name, price -> viewModel.updateStock(stock, name, price) },
+                        stockIngredients = stockIngredients,
+                        onAddStock = { name, price, quantity -> viewModel.addStock(name, price, quantity) },
+                        onUpdateStock = { stock, name, price, quantity -> viewModel.updateStock(stock, name, price, quantity) },
+                        onAdjustStockQuantity = { stock, delta -> viewModel.adjustStockQuantity(stock, delta) },
+                        onSetStockQuantity = { stock, quantity -> viewModel.updateStockQuantity(stock, quantity) },
                         onDeleteStock = { stock -> viewModel.deleteStock(stock) },
-                        onAddIngredient = { name, price -> viewModel.addIngredient(name, price) },
-                        onUpdateIngredient = { ingredient, name, price -> viewModel.updateIngredient(ingredient, name, price) },
-                        onDeleteIngredient = { ingredient -> viewModel.deleteIngredient(ingredient) }
+                        onAddStockIngredient = { stockId, name, quantity, cost -> viewModel.addStockIngredient(stockId, name, quantity, cost) },
+                        onUpdateStockIngredient = { ing, name, quantity, cost -> viewModel.updateStockIngredient(ing, name, quantity, cost) },
+                        onDeleteStockIngredient = { ing -> viewModel.deleteStockIngredient(ing) }
                     )
                 }
             }

@@ -1,182 +1,212 @@
 {
   "app/build.gradle.kts": {
-    "mtime": 1789984930.9740725,
-    "seen": 1789985121.5185113,
-    "ast_hash": "ca4b6d1d71fbaf57aa67379eda354aa6",
+    "mtime": 1789994364.9001257,
+    "seen": 1789996955.1780207,
+    "ast_hash": "84f681ab802dabb968191202f5cf3c87",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/MainActivity.kt": {
-    "mtime": 1789985243.4358294,
-    "seen": 1789985304.3727942,
+    "mtime": 1789994364.9011486,
+    "seen": 1789996955.1780245,
     "ast_hash": "6b21aac2df18a9b19d10aa54fccbf43e",
     "semantic_hash": ""
   },
   "build.gradle.kts": {
-    "mtime": 1789981149.7477438,
-    "seen": 1789983709.4278579,
+    "mtime": 1789994364.902394,
+    "seen": 1789996955.1780503,
     "ast_hash": "37578c6d2e5af78a03b9a2e7599989c1",
     "semantic_hash": "37578c6d2e5af78a03b9a2e7599989c1"
   },
   "gradlew": {
-    "mtime": 1789981174.5828667,
-    "seen": 1789983709.4278588,
+    "mtime": 1789994364.902774,
+    "seen": 1789996955.178051,
     "ast_hash": "41adef6fe68f541f0d82776c9cb83482",
     "semantic_hash": "41adef6fe68f541f0d82776c9cb83482"
   },
   "settings.gradle.kts": {
-    "mtime": 1789981135.429673,
-    "seen": 1789983709.42786,
+    "mtime": 1789994364.9031258,
+    "seen": 1789996955.178052,
     "ast_hash": "0f48c262f067db42aeb1800de49838bd",
     "semantic_hash": "0f48c262f067db42aeb1800de49838bd"
   },
   "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt": {
-    "mtime": 1789985540.9196389,
-    "seen": 1789985557.005419,
+    "mtime": 1789994364.9018226,
+    "seen": 1789996955.1780443,
     "ast_hash": "62003bcdb11c76d4efd10de650810453",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/theme/Color.kt": {
-    "mtime": 1789984675.632577,
-    "seen": 1789984751.7121968,
+    "mtime": 1789994364.9018226,
+    "seen": 1789996955.1780455,
     "ast_hash": "6c477ba12ce253dcf157237fb4be1787",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/theme/Theme.kt": {
-    "mtime": 1789984682.7135887,
-    "seen": 1789984751.7121973,
+    "mtime": 1789994364.9021754,
+    "seen": 1789996955.1780462,
     "ast_hash": "2bb1cfcc86402734466e46f50b5d9887",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/theme/Type.kt": {
-    "mtime": 1789984679.5415835,
-    "seen": 1789984751.7121983,
+    "mtime": 1789994364.9021754,
+    "seen": 1789996955.1780472,
     "ast_hash": "d7d6f137989d93877deab902aeb7720e",
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1789983480.053986,
-    "seen": 1789984751.7122028,
+    "mtime": 1789994364.9001257,
+    "seen": 1789996955.1780527,
     "ast_hash": "6a47d64fcc136324ca395065a707ef76",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/data/local/OrderDao.kt": {
-    "mtime": 1789989583.6343288,
-    "seen": 1789989666.3894558,
+    "mtime": 1789994364.9012828,
+    "seen": 1789996955.1780279,
     "ast_hash": "4698a78f81a273ab53fd6fd60926054d",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt": {
-    "mtime": 1789988294.2821598,
-    "seen": 1789988484.6134489,
-    "ast_hash": "0d02153b89972ea380e9cb54b66bba53",
+    "mtime": 1789997676.1289904,
+    "seen": 1789997761.5861096,
+    "ast_hash": "280f614c6cf63365113085fa85b53f29",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/data/model/Order.kt": {
-    "mtime": 1789984936.0100837,
-    "seen": 1789985121.5185194,
-    "ast_hash": "20c8b0e5c6cd51a82e1be4b97ada11d3",
+    "mtime": 1789996544.5104628,
+    "seen": 1789996955.1780329,
+    "ast_hash": "4ba71bf0664ec9905bb2f9523d8089d2",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt": {
-    "mtime": 1789989590.893352,
-    "seen": 1789989666.3894618,
-    "ast_hash": "dc3965e73bb867320c243e72d3e0fd33",
+    "mtime": 1789996582.2376301,
+    "seen": 1789996955.1780362,
+    "ast_hash": "7230b6d3c52b8e2d99d238f46f43a38c",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt": {
-    "mtime": 1789989598.8853772,
-    "seen": 1789989666.3894737,
-    "ast_hash": "c57f968e8823ebe76896b7f79ffa31d3",
+    "mtime": 1789997683.689019,
+    "seen": 1789997761.5861287,
+    "ast_hash": "9a535aad9e0f569df181e1b07a7bf581",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/components/OrderCard.kt": {
-    "mtime": 1789987444.2961998,
-    "seen": 1789987562.9173126,
-    "ast_hash": "310d0deed10b7992895bd534dde979e5",
+    "mtime": 1789996923.4330678,
+    "seen": 1789996955.1780372,
+    "ast_hash": "0a6ecd55df2a77c2f1f0e723932ba0d7",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/components/RapidEntryWizardModal.kt": {
-    "mtime": 1789988373.1134257,
-    "seen": 1789988484.6134577,
-    "ast_hash": "4f59270e19d9afdeca71d160b2c297f1",
+    "mtime": 1789998792.0350769,
+    "seen": 1789998808.0187695,
+    "ast_hash": "5909ec2c8d8f36525ca27eff5c689a03",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/components/SeallBottomBar.kt": {
-    "mtime": 1789989143.2579312,
-    "seen": 1789989251.06873,
+    "mtime": 1789994364.9016063,
+    "seen": 1789996955.1780396,
     "ast_hash": "cc677c4b733495d7465e77556107697f",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt": {
-    "mtime": 1789989808.170781,
-    "seen": 1789989814.7091582,
-    "ast_hash": "4a29638db538e995ca42c18443d20a57",
+    "mtime": 1789996875.1888711,
+    "seen": 1789996955.1780415,
+    "ast_hash": "8af8649d3cdce18445b369827afb9947",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/HomeTab.kt": {
-    "mtime": 1789987472.4002848,
-    "seen": 1789987562.9173234,
-    "ast_hash": "99a6de262e67d6888f5391a31e4f84dd",
+    "mtime": 1789996854.7937875,
+    "seen": 1789996955.1780422,
+    "ast_hash": "357ea872c0a1095c50a32107c446934a",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt": {
-    "mtime": 1789989934.2609081,
-    "seen": 1789989940.2559533,
-    "ast_hash": "2375f94f7aee31097029d4386e706979",
+    "mtime": 1789997745.9762537,
+    "seen": 1789997761.5861237,
+    "ast_hash": "7925c1df9df48486111e653db3c13d4e",
     "semantic_hash": ""
   },
   "app/src/main/res/drawable/seal_icon.jpg": {
-    "mtime": 1789986782.1422074,
-    "seen": 1789986806.5879316,
+    "mtime": 1789994364.902394,
+    "seen": 1789996955.1780531,
     "ast_hash": "ecf29d2ea1cc29d10dfe598fb39e874f",
     "semantic_hash": ""
   },
   "seal-icon.jpeg": {
-    "mtime": 1789986717.483376,
-    "seen": 1789986806.5879323,
+    "mtime": 1789994364.9031258,
+    "seen": 1789996955.1780539,
     "ast_hash": "ecf29d2ea1cc29d10dfe598fb39e874f",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/components/QuickEditDialog.kt": {
-    "mtime": 1789988474.2507632,
-    "seen": 1789988484.6134565,
-    "ast_hash": "295e9721a1757482ab98bd8b4affee73",
+    "mtime": 1789998246.0436063,
+    "seen": 1789998276.1071815,
+    "ast_hash": "6bc626cdea7a68add8a56d43adc292b9",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/data/local/StockDao.kt": {
-    "mtime": 1789988290.2661462,
-    "seen": 1789988484.613451,
+    "mtime": 1789994364.9012828,
+    "seen": 1789996955.17803,
     "ast_hash": "802163dc3f73c481d31c40faa14a82a2",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/data/model/StockItem.kt": {
-    "mtime": 1789988288.142139,
-    "seen": 1789988484.6134536,
-    "ast_hash": "87523ee31d611e7a7bac488c396f51d4",
+    "mtime": 1789997664.564947,
+    "seen": 1789997761.5861163,
+    "ast_hash": "4537dceac2ff804829d0b1f781ec40ff",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt": {
-    "mtime": 1789988710.527539,
-    "seen": 1789988720.4465814,
-    "ast_hash": "095502ec877f75795ffb57aa847e4fb0",
+    "mtime": 1789998232.5395405,
+    "seen": 1789998276.107188,
+    "ast_hash": "f926bdbe6bf763296ac26d1763d32fba",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt": {
-    "mtime": 1789989241.5372443,
-    "seen": 1789989251.0687308,
-    "ast_hash": "bd8acda6e77f5aa7b6edcfc2c053fc89",
+    "mtime": 1789996882.5459013,
+    "seen": 1789996955.1780407,
+    "ast_hash": "4d9f72515f5c207246786bbeb77cd138",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/util/DateUtils.kt": {
-    "mtime": 1789989112.0278318,
-    "seen": 1789989251.0687385,
+    "mtime": 1789994364.9023433,
+    "seen": 1789996955.1780496,
     "ast_hash": "1374144b8defe3ca0aa662f072a0247f",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/util/CsvHelper.kt": {
-    "mtime": 1789989577.961311,
-    "seen": 1789989666.3894749,
-    "ast_hash": "f9bc41b68cfd88f4f5dadca7f8a4f792",
+    "mtime": 1789996900.092973,
+    "seen": 1789996955.1780488,
+    "ast_hash": "c211339ca7c6e09f438642fb81639eaa",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/example/seall/data/local/IngredientDao.kt": {
+    "mtime": 1789994364.9012134,
+    "seen": 1789996955.1780262,
+    "ast_hash": "4c73106a8c079cbe91897759957098d9",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/example/seall/data/model/Ingredient.kt": {
+    "mtime": 1789994364.9012828,
+    "seen": 1789996955.1780322,
+    "ast_hash": "69d460450f01ccd213ed548825cc870d",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/example/seall/data/local/StockIngredientDao.kt": {
+    "mtime": 1789996553.4055023,
+    "seen": 1789996955.1780312,
+    "ast_hash": "f2ec4d5fa1ff355ca64a7b309eda787d",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/example/seall/data/model/OrderItem.kt": {
+    "mtime": 1789996912.644024,
+    "seen": 1789996955.1780336,
+    "ast_hash": "5820a61c122c480c6858436b0f6299ad",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/example/seall/data/model/StockIngredient.kt": {
+    "mtime": 1789996548.6744814,
+    "seen": 1789996955.1780345,
+    "ast_hash": "566ee2445e337b2b0c197ce484e05b44",
     "semantic_hash": ""
   }
 }

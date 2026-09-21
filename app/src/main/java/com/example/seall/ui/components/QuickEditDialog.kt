@@ -17,9 +17,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.ArrowDropUp
@@ -104,7 +106,7 @@ fun QuickEditDialog(
                 )
                 .systemBarsPadding()
                 .imePadding()
-                .padding(horizontal = 28.dp),
+                .padding(horizontal = 28.dp, vertical = 16.dp),
             contentAlignment = Alignment.Center
         ) {
             Card(
@@ -123,6 +125,7 @@ fun QuickEditDialog(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .verticalScroll(rememberScrollState())
                         .padding(22.dp)
                 ) {
                     Text(
