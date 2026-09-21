@@ -42,10 +42,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.seall.data.model.Order
 import com.example.seall.ui.components.AppTab
+import com.example.seall.ui.components.QuickEditDialog
 import com.example.seall.ui.components.RapidEntryWizardModal
 import com.example.seall.ui.components.SeallBottomBar
 import com.example.seall.ui.theme.SeallPrimary
 import com.example.seall.ui.viewmodel.OrderViewModel
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,20 +58,17 @@ fun MainScreen(
 ) {
     var currentTab by remember { mutableStateOf(AppTab.HOME) }
     var orderToDelete by remember { mutableStateOf<Order?>(null) }
+    var orderForNameEdit by remember { mutableStateOf<Order?>(null) }
+    var orderForPriceEdit by remember { mutableStateOf<Order?>(null) }
 
     val orders by viewModel.orders.collectAsState()
-    val unpaidOrders by viewModel.unpaidOrders.collectAsState()
     val paidTotal by viewModel.paidTotal.collectAsState()
     val unpaidTotal by viewModel.unpaidTotal.collectAsState()
-    val combinedTotal by viewModel.combinedTotal.collectAsState()
-
-    val filteredOrders by viewModel.filteredOrders.collectAsState()
-    val searchQuery by viewModel.searchQuery.collectAsState()
-    val paymentFilter by viewModel.paymentFilter.collectAsState()
-    val selectedDateMillis by viewModel.selectedDateMillis.collectAsState()
 
     val isWizardOpen by viewModel.isWizardOpen.collectAsState()
     val editingOrder by viewModel.editingOrder.collectAsState()
+    val stocks by viewModel.stocks.collectAsState()
+    val ingredients by viewModel.ingredients.collectAsState()
 
     // Delete Confirmation Dialog
     orderToDelete?.let { order ->
@@ -99,11 +98,45 @@ fun MainScreen(
     RapidEntryWizardModal(
         isOpen = isWizardOpen,
         editingOrder = editingOrder,
+        stocks = stocks,
         onDismiss = { viewModel.closeWizard() },
         onSubmit = { name, price, isPaid ->
             viewModel.submitOrder(name, price, isPaid)
         }
     )
+
+    // Quick Edit Name Dialog
+    orderForNameEdit?.let { order ->
+        QuickEditDialog(
+            title = "Edit Customer Name",
+            initialValue = order.customerName,
+            label = "Customer Name",
+            isNumeric = false,
+            onDismiss = { orderForNameEdit = null },
+            onConfirm = { newName ->
+                viewModel.updateCustomerName(order, newName)
+                orderForNameEdit = null
+            }
+        )
+    }
+
+    // Quick Edit Price Dialog
+    orderForPriceEdit?.let { order ->
+        QuickEditDialog(
+            title = "Edit Price",
+            initialValue = String.format(Locale.US, "%.2f", order.price),
+            label = "Price in ₱",
+            isNumeric = true,
+            prefix = "₱",
+            stocks = stocks,
+            onDismiss = { orderForPriceEdit = null },
+            onConfirm = { newPriceStr ->
+                val newPrice = newPriceStr.toDoubleOrNull() ?: order.price
+                viewModel.updateOrderPrice(order, newPrice)
+                orderForPriceEdit = null
+            }
+        )
+    }
 
     Scaffold(
         topBar = {
@@ -126,26 +159,12 @@ fun MainScreen(
                                     .clip(CircleShape),
                                 contentScale = ContentScale.Crop
                             )
-                            Column {
-                                Text(
-                                    text = "Seall",
-                                    style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold,
-                                    color = MaterialTheme.colorScheme.onBackground
-                                )
-                                val subtitle = when (currentTab) {
-                                    AppTab.HOME -> null
-                                    AppTab.DASHBOARD -> "Summary & Debtors"
-                                    AppTab.CALENDAR -> "Timeline & Lookup"
-                                }
-                                if (subtitle != null) {
-                                    Text(
-                                        text = subtitle,
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
-                                }
-                            }
+                            Text(
+                                text = "Seall",
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onBackground
+                            )
                         }
 
                         // Theme Toggle Icon Button
@@ -192,7 +211,8 @@ fun MainScreen(
                         paidTotal = paidTotal,
                         unpaidTotal = unpaidTotal,
                         onOpenWizard = { viewModel.openWizard(null) },
-                        onEditOrder = { order -> viewModel.openWizard(order) },
+                        onEditName = { order -> orderForNameEdit = order },
+                        onEditPrice = { order -> orderForPriceEdit = order },
                         onTogglePaid = { order -> viewModel.togglePayment(order) },
                         onDeleteOrder = { order -> orderToDelete = order }
                     )
@@ -200,26 +220,36 @@ fun MainScreen(
 
                 AppTab.DASHBOARD -> {
                     DashboardTab(
-                        paidTotal = paidTotal,
-                        unpaidTotal = unpaidTotal,
-                        combinedTotal = combinedTotal,
-                        unpaidOrders = unpaidOrders,
-                        onMarkAsPaid = { order -> viewModel.togglePayment(order) }
+                        allOrders = orders,
+                        allIngredients = ingredients,
+                        onMarkAsPaid = { order -> viewModel.togglePayment(order) },
+                        onImportOrders = { importedOrders ->
+                            viewModel.importOrders(importedOrders) {}
+                        }
                     )
                 }
 
-                AppTab.CALENDAR -> {
-                    CalendarTab(
-                        filteredOrders = filteredOrders,
-                        searchQuery = searchQuery,
-                        onSearchChange = { viewModel.setSearchQuery(it) },
-                        paymentFilter = paymentFilter,
-                        onFilterChange = { viewModel.setPaymentFilter(it) },
-                        selectedDateMillis = selectedDateMillis,
-                        onDateSelected = { viewModel.setSelectedDateMillis(it) },
-                        onTogglePaid = { order -> viewModel.togglePayment(order) },
-                        onEditOrder = { order -> viewModel.openWizard(order) },
-                        onDeleteOrder = { order -> orderToDelete = order }
+                AppTab.ARCHIVES -> {
+                    ArchivesTab(
+                        allOrders = orders,
+                        allIngredients = ingredients,
+                        onDeleteArchive = { startOfDay, endOfDay ->
+                            viewModel.deleteOrdersForDay(startOfDay, endOfDay)
+                        },
+                        onTogglePaid = { order -> viewModel.togglePayment(order) }
+                    )
+                }
+
+                AppTab.STOCKS -> {
+                    StocksTab(
+                        stocks = stocks,
+                        ingredients = ingredients,
+                        onAddStock = { name, price -> viewModel.addStock(name, price) },
+                        onUpdateStock = { stock, name, price -> viewModel.updateStock(stock, name, price) },
+                        onDeleteStock = { stock -> viewModel.deleteStock(stock) },
+                        onAddIngredient = { name, price -> viewModel.addIngredient(name, price) },
+                        onUpdateIngredient = { ingredient, name, price -> viewModel.updateIngredient(ingredient, name, price) },
+                        onDeleteIngredient = { ingredient -> viewModel.deleteIngredient(ingredient) }
                     )
                 }
             }

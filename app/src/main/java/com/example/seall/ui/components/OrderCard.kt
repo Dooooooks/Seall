@@ -4,24 +4,15 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -32,7 +23,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,9 +37,9 @@ import java.util.Locale
 fun OrderCard(
     order: Order,
     onTogglePaid: () -> Unit,
-    onEdit: () -> Unit,
+    onEditName: () -> Unit,
+    onEditPrice: () -> Unit,
     onDelete: () -> Unit,
-    onSettle: () -> Unit = onTogglePaid,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -61,32 +51,40 @@ fun OrderCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 14.dp, vertical = 12.dp),
+                .padding(horizontal = 14.dp, vertical = 10.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Customer Name (Date and time removed for clean, rapid viewing)
+            // Clickable Customer Name (Tapping allows editing customer name)
             Text(
                 text = order.customerName,
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable { onEditName() }
+                    .padding(vertical = 4.dp, horizontal = 4.dp)
             )
 
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                // Slightly smaller price text
+                // Clickable Price (Tapping allows editing price)
                 Text(
                     text = String.format(Locale.US, "₱%.2f", order.price),
                     fontSize = 15.sp,
                     color = MaterialTheme.colorScheme.onSurface,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(6.dp))
+                        .clickable { onEditPrice() }
+                        .padding(horizontal = 6.dp, vertical = 4.dp)
                 )
 
-                // Compact Paid / Unpaid Status Badge
+                // Compact Paid / Unpaid Status Badge (Tapping toggles status)
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(6.dp))
@@ -113,45 +111,6 @@ fun OrderCard(
                             color = if (order.isPaid) SeallPaidGreen else SeallUnpaidAmber
                         )
                     }
-                }
-
-                // Dedicated Settle Button for unpaid transactions
-                if (!order.isPaid) {
-                    Button(
-                        onClick = onSettle,
-                        shape = RoundedCornerShape(8.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = SeallPaidGreen,
-                            contentColor = Color.White
-                        ),
-                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
-                        modifier = Modifier.height(28.dp)
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Check,
-                            contentDescription = "Settle",
-                            modifier = Modifier.size(12.dp)
-                        )
-                        Spacer(modifier = Modifier.width(3.dp))
-                        Text(
-                            text = "Settle",
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-                }
-
-                // Edit Button
-                IconButton(
-                    onClick = onEdit,
-                    modifier = Modifier.size(28.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Edit,
-                        contentDescription = "Edit Order",
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                        modifier = Modifier.size(16.dp)
-                    )
                 }
 
                 // Delete Button

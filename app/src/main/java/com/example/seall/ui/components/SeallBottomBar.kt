@@ -2,9 +2,10 @@ package com.example.seall.ui.components
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Archive
 import androidx.compose.material.icons.filled.BarChart
-import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -23,7 +24,8 @@ import com.example.seall.ui.theme.SeallPrimary
 enum class AppTab(val title: String, val icon: ImageVector) {
     HOME("Home", Icons.Default.Home),
     DASHBOARD("Dashboard", Icons.Default.BarChart),
-    CALENDAR("Calendar", Icons.Default.CalendarMonth)
+    ARCHIVES("Archives", Icons.Default.Archive),
+    STOCKS("Stocks", Icons.Default.Inventory2)
 }
 
 @Composable

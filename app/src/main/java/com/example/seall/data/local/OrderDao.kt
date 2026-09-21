@@ -42,6 +42,9 @@ interface OrderDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrder(order: Order): Long
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrders(orders: List<Order>): List<Long>
+
     @Update
     suspend fun updateOrder(order: Order)
 
@@ -50,6 +53,9 @@ interface OrderDao {
 
     @Query("DELETE FROM orders WHERE id = :id")
     suspend fun deleteOrderById(id: Long)
+
+    @Query("DELETE FROM orders WHERE createdAt >= :startTime AND createdAt <= :endTime")
+    suspend fun deleteOrdersInDateRange(startTime: Long, endTime: Long)
 
     @Query("UPDATE orders SET isPaid = :isPaid WHERE id = :id")
     suspend fun updatePaymentStatus(id: Long, isPaid: Boolean)

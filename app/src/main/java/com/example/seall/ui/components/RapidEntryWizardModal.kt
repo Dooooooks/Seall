@@ -28,6 +28,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.ArrowDropUp
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Person
@@ -35,11 +37,14 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -63,6 +68,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.example.seall.data.model.Order
+import com.example.seall.data.model.StockItem
 import com.example.seall.ui.theme.SeallDarkContrast
 import com.example.seall.ui.theme.SeallPaidGreen
 import com.example.seall.ui.theme.SeallPrimary
@@ -73,6 +79,7 @@ import java.util.Locale
 fun RapidEntryWizardModal(
     isOpen: Boolean,
     editingOrder: Order? = null,
+    stocks: List<StockItem> = emptyList(),
     onDismiss: () -> Unit,
     onSubmit: (name: String, price: Double, isPaid: Boolean) -> Unit
 ) {
@@ -85,6 +92,7 @@ fun RapidEntryWizardModal(
     }
     var nameError by remember { mutableStateOf(false) }
     var priceError by remember { mutableStateOf(false) }
+    var stockDropdownExpanded by remember { mutableStateOf(false) }
 
     val nameFocusRequester = remember { FocusRequester() }
     val priceFocusRequester = remember { FocusRequester() }
@@ -233,7 +241,6 @@ fun RapidEntryWizardModal(
                                             if (it.isNotBlank()) nameError = false
                                         },
                                         label = { Text("Customer Name") },
-                                        placeholder = { Text("e.g. Maria, Juan D.") },
                                         isError = nameError,
                                         supportingText = if (nameError) {
                                             { Text("Customer name is required", color = MaterialTheme.colorScheme.error) }
@@ -340,6 +347,87 @@ fun RapidEntryWizardModal(
                                                 color = SeallPrimary,
                                                 modifier = Modifier.padding(start = 12.dp)
                                             )
+                                        },
+                                        trailingIcon = {
+                                            Box(modifier = Modifier.padding(end = 4.dp)) {
+                                                Surface(
+                                                    shape = RoundedCornerShape(8.dp),
+                                                    color = if (stockDropdownExpanded) SeallPrimary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
+                                                    modifier = Modifier
+                                                        .clip(RoundedCornerShape(8.dp))
+                                                        .clickable { stockDropdownExpanded = !stockDropdownExpanded }
+                                                ) {
+                                                    Row(
+                                                        verticalAlignment = Alignment.CenterVertically,
+                                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)
+                                                    ) {
+                                                        Text(
+                                                            text = "Stocks",
+                                                            style = MaterialTheme.typography.labelMedium,
+                                                            fontWeight = FontWeight.Bold,
+                                                            color = if (stockDropdownExpanded) SeallPrimary else MaterialTheme.colorScheme.onSurfaceVariant
+                                                        )
+                                                        Icon(
+                                                            imageVector = if (stockDropdownExpanded) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
+                                                            contentDescription = "Choose stock",
+                                                            tint = if (stockDropdownExpanded) SeallPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+                                                            modifier = Modifier.size(18.dp)
+                                                        )
+                                                    }
+                                                }
+
+                                                DropdownMenu(
+                                                    expanded = stockDropdownExpanded,
+                                                    onDismissRequest = { stockDropdownExpanded = false }
+                                                ) {
+                                                    if (stocks.isEmpty()) {
+                                                        DropdownMenuItem(
+                                                            text = {
+                                                                Text(
+                                                                    text = "No stocks added yet",
+                                                                    style = MaterialTheme.typography.bodySmall,
+                                                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                                                )
+                                                            },
+                                                            onClick = { stockDropdownExpanded = false }
+                                                        )
+                                                    } else {
+                                                        stocks.forEach { stock ->
+                                                            DropdownMenuItem(
+                                                                text = {
+                                                                    Row(
+                                                                        modifier = Modifier.fillMaxWidth(),
+                                                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                                                        verticalAlignment = Alignment.CenterVertically
+                                                                    ) {
+                                                                        Text(
+                                                                            text = stock.name,
+                                                                            style = MaterialTheme.typography.bodyMedium,
+                                                                            fontWeight = FontWeight.SemiBold
+                                                                        )
+                                                                        Spacer(modifier = Modifier.width(16.dp))
+                                                                        Text(
+                                                                            text = String.format(Locale.US, "₱%.2f", stock.price),
+                                                                            style = MaterialTheme.typography.bodyMedium,
+                                                                            fontWeight = FontWeight.Bold,
+                                                                            color = SeallPrimary
+                                                                        )
+                                                                    }
+                                                                },
+                                                                onClick = {
+                                                                    priceInput = if (stock.price % 1.0 == 0.0) {
+                                                                        stock.price.toLong().toString()
+                                                                    } else {
+                                                                        String.format(Locale.US, "%.2f", stock.price)
+                                                                    }
+                                                                    priceError = false
+                                                                    stockDropdownExpanded = false
+                                                                }
+                                                            )
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         },
                                         keyboardOptions = KeyboardOptions(
                                             keyboardType = KeyboardType.Decimal,

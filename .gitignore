@@ -1,0 +1,36 @@
+# ─── Gradle & Build Outputs ───────────────────────
+.gradle/
+build/
+app/build/
+bin/
+gen/
+out/
+*.apk
+*.aar
+*.aab
+*.ap_
+*.dex
+*.class
+
+# ─── Local Machine & SDK Config ───────────────────
+local.properties
+.navigation/
+captures/
+*.log
+
+# ─── IDE & Editors (Android Studio / IntelliJ / VS Code) ─
+*.iml
+.idea/
+.vscode/
+
+# ─── Signing Keystores & Credentials ─────────────
+*.jks
+*.keystore
+google-services.json
+
+# ─── OS-specific files ────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Graphify Caches ──────────────────────────────
+graphify-out/cache/

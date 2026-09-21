@@ -6,20 +6,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.seall.data.local.SeallDatabase
+import com.example.seall.data.model.Ingredient
 import com.example.seall.data.model.Order
+import com.example.seall.data.model.StockItem
 import com.example.seall.data.repository.OrderRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import java.util.Calendar
-
-enum class PaymentFilter {
-    ALL, PAID, UNPAID
-}
 
 class OrderViewModel(
     application: Application,
@@ -69,15 +65,19 @@ class OrderViewModel(
             initialValue = 0
         )
 
-    // UI Search & Filter States
-    private val _searchQuery = MutableStateFlow("")
-    val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
+    val stocks: StateFlow<List<StockItem>> = repository.allStocks
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptyList()
+        )
 
-    private val _paymentFilter = MutableStateFlow(PaymentFilter.ALL)
-    val paymentFilter: StateFlow<PaymentFilter> = _paymentFilter.asStateFlow()
-
-    private val _selectedDateMillis = MutableStateFlow<Long?>(null)
-    val selectedDateMillis: StateFlow<Long?> = _selectedDateMillis.asStateFlow()
+    val ingredients: StateFlow<List<Ingredient>> = repository.allIngredients
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptyList()
+        )
 
     // Rapid-Entry Wizard & Edit States
     private val _isWizardOpen = MutableStateFlow(false)
@@ -86,43 +86,12 @@ class OrderViewModel(
     private val _editingOrder = MutableStateFlow<Order?>(null)
     val editingOrder: StateFlow<Order?> = _editingOrder.asStateFlow()
 
-    // Combined Reactive Filtered Orders
-    val filteredOrders: StateFlow<List<Order>> = combine(
-        orders,
-        _searchQuery,
-        _paymentFilter,
-        _selectedDateMillis
-    ) { orderList, query, filter, dateMillis ->
-        orderList.filter { order ->
-            // Search filter
-            val matchesQuery = query.isBlank() ||
-                order.customerName.contains(query, ignoreCase = true) ||
-                String.format("%.2f", order.price).contains(query)
-
-            // Payment filter
-            val matchesPayment = when (filter) {
-                PaymentFilter.ALL -> true
-                PaymentFilter.PAID -> order.isPaid
-                PaymentFilter.UNPAID -> !order.isPaid
-            }
-
-            // Date filter
-            val matchesDate = if (dateMillis == null) {
-                true
-            } else {
-                val calOrder = Calendar.getInstance().apply { timeInMillis = order.createdAt }
-                val calTarget = Calendar.getInstance().apply { timeInMillis = dateMillis }
-                calOrder.get(Calendar.YEAR) == calTarget.get(Calendar.YEAR) &&
-                    calOrder.get(Calendar.DAY_OF_YEAR) == calTarget.get(Calendar.DAY_OF_YEAR)
-            }
-
-            matchesQuery && matchesPayment && matchesDate
+    fun deleteOrdersForDay(startOfDay: Long, endOfDay: Long) {
+        viewModelScope.launch {
+            repository.deleteOrdersInDateRange(startOfDay, endOfDay)
+            repository.deleteIngredientsForDay(startOfDay, endOfDay)
         }
-    }.stateIn(
-        scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5000),
-        initialValue = emptyList()
-    )
+    }
 
     // Wizard Controls
     fun openWizard(orderToEdit: Order? = null) {
@@ -174,16 +143,78 @@ class OrderViewModel(
         }
     }
 
-    fun setSearchQuery(query: String) {
-        _searchQuery.value = query
+    fun updateCustomerName(order: Order, newName: String) {
+        val trimmed = newName.trim()
+        if (trimmed.isNotBlank() && trimmed != order.customerName) {
+            viewModelScope.launch {
+                repository.updateOrder(order.copy(customerName = trimmed))
+            }
+        }
     }
 
-    fun setPaymentFilter(filter: PaymentFilter) {
-        _paymentFilter.value = filter
+    fun updateOrderPrice(order: Order, newPrice: Double) {
+        if (newPrice > 0.0 && newPrice != order.price) {
+            viewModelScope.launch {
+                repository.updateOrder(order.copy(price = newPrice))
+            }
+        }
     }
 
-    fun setSelectedDateMillis(dateMillis: Long?) {
-        _selectedDateMillis.value = dateMillis
+    fun importOrders(ordersToImport: List<Order>, onComplete: () -> Unit = {}) {
+        viewModelScope.launch {
+            repository.insertOrders(ordersToImport)
+            onComplete()
+        }
+    }
+
+    // Stocks Management
+    fun addStock(name: String, price: Double) {
+        val trimmed = name.trim()
+        if (trimmed.isNotBlank() && price > 0.0) {
+            viewModelScope.launch {
+                repository.insertStock(StockItem(name = trimmed, price = price))
+            }
+        }
+    }
+
+    fun updateStock(stock: StockItem, name: String, price: Double) {
+        val trimmed = name.trim()
+        if (trimmed.isNotBlank() && price > 0.0) {
+            viewModelScope.launch {
+                repository.updateStock(stock.copy(name = trimmed, price = price))
+            }
+        }
+    }
+
+    fun deleteStock(stock: StockItem) {
+        viewModelScope.launch {
+            repository.deleteStock(stock)
+        }
+    }
+
+    // Ingredients Management
+    fun addIngredient(name: String, price: Double) {
+        val trimmed = name.trim()
+        if (trimmed.isNotBlank() && price > 0.0) {
+            viewModelScope.launch {
+                repository.insertIngredient(Ingredient(name = trimmed, price = price))
+            }
+        }
+    }
+
+    fun updateIngredient(ingredient: Ingredient, name: String, price: Double) {
+        val trimmed = name.trim()
+        if (trimmed.isNotBlank() && price > 0.0) {
+            viewModelScope.launch {
+                repository.updateIngredient(ingredient.copy(name = trimmed, price = price))
+            }
+        }
+    }
+
+    fun deleteIngredient(ingredient: Ingredient) {
+        viewModelScope.launch {
+            repository.deleteIngredient(ingredient)
+        }
     }
 
     companion object {
@@ -192,7 +223,7 @@ class OrderViewModel(
                 @Suppress("UNCHECKED_CAST")
                 override fun <T : ViewModel> create(modelClass: Class<T>): T {
                     val db = SeallDatabase.getInstance(application)
-                    val repo = OrderRepository(db.orderDao())
+                    val repo = OrderRepository(db.orderDao(), db.stockDao(), db.ingredientDao())
                     return OrderViewModel(application, repo) as T
                 }
             }

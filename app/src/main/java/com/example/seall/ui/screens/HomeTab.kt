@@ -50,7 +50,8 @@ fun HomeTab(
     paidTotal: Double,
     unpaidTotal: Double,
     onOpenWizard: () -> Unit,
-    onEditOrder: (Order) -> Unit,
+    onEditName: (Order) -> Unit,
+    onEditPrice: (Order) -> Unit,
     onTogglePaid: (Order) -> Unit,
     onDeleteOrder: (Order) -> Unit,
     modifier: Modifier = Modifier
@@ -194,7 +195,8 @@ fun HomeTab(
                     OrderCard(
                         order = order,
                         onTogglePaid = { onTogglePaid(order) },
-                        onEdit = { onEditOrder(order) },
+                        onEditName = { onEditName(order) },
+                        onEditPrice = { onEditPrice(order) },
                         onDelete = { onDeleteOrder(order) }
                     )
                 }
