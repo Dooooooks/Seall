@@ -188,6 +188,20 @@ class OrderViewModel(
         }
     }
 
+    fun importStocks(stocksToImport: List<StockItem>, onComplete: () -> Unit = {}) {
+        viewModelScope.launch {
+            repository.insertStocks(stocksToImport)
+            onComplete()
+        }
+    }
+
+    fun importStockIngredients(ingredientsToImport: List<StockIngredient>, onComplete: () -> Unit = {}) {
+        viewModelScope.launch {
+            ingredientsToImport.forEach { repository.insertStockIngredient(it) }
+            onComplete()
+        }
+    }
+
     // Stocks Management
     fun addStock(name: String, price: Double, quantity: Int = 0) {
         val trimmed = name.trim()

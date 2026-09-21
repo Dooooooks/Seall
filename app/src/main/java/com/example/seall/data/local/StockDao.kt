@@ -18,6 +18,9 @@ interface StockDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertStock(stock: StockItem): Long
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertStocks(stocks: List<StockItem>): List<Long>
+
     @Update
     suspend fun updateStock(stock: StockItem)
 

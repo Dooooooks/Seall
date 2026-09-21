@@ -29,6 +29,8 @@ class OrderRepository(
 
     suspend fun insertStock(stock: StockItem): Long = stockDao.insertStock(stock)
 
+    suspend fun insertStocks(stocks: List<StockItem>): List<Long> = stockDao.insertStocks(stocks)
+
     suspend fun updateStock(stock: StockItem) = stockDao.updateStock(stock)
 
     suspend fun deleteStock(stock: StockItem) = stockDao.deleteStock(stock)

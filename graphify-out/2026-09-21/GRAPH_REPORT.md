@@ -1,17 +1,17 @@
 # Graph Report - Seall  (2026-09-21)
 
 ## Corpus Check
-- 33 files · ~22,225 words
+- 33 files · ~24,365 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: .xml 2, .properties 2, (none) 1)
 
 ## Summary
-- 214 nodes · 446 edges · 18 communities (11 shown, 3 thin omitted)
+- 229 nodes · 492 edges · 19 communities (11 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7ed53355`
+- Built from commit: `d70dc6b5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -24,24 +24,25 @@
 - gradlew
 - Order
 - ArchivesTab.kt
-- MainScreen
+- MainScreen.kt
 - StockIngredient
 - DashboardTab.kt
 - StockItem
 - OrderItem
 - TestThemeScreen.kt
+- CsvHelper
 
 ## God Nodes (most connected - your core abstractions)
-1. `Order` - 46 edges
-2. `OrderViewModel` - 36 edges
-3. `OrderRepository` - 33 edges
-4. `StockItem` - 27 edges
-5. `Ingredient` - 23 edges
-6. `StockIngredient` - 23 edges
+1. `Order` - 47 edges
+2. `OrderViewModel` - 38 edges
+3. `StockItem` - 36 edges
+4. `OrderRepository` - 34 edges
+5. `StockIngredient` - 29 edges
+6. `Ingredient` - 23 edges
 7. `OrderDao` - 19 edges
-8. `MainScreen()` - 11 edges
-9. `IngredientDao` - 10 edges
-10. `StockIngredientDao` - 10 edges
+8. `CsvHelper` - 14 edges
+9. `MainScreen()` - 13 edges
+10. `IngredientDao` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `MainScreen()` --calls--> `ArchivesTab()`  [INFERRED]
@@ -58,14 +59,14 @@
 ## Import Cycles
 - None detected.
 
-## Communities (18 total, 3 thin omitted)
+## Communities (19 total, 4 thin omitted)
 
 ### Community 0 - "Ingredient"
 Cohesion: 0.19
 Nodes (3): IngredientDao, Flow, Ingredient
 
 ### Community 1 - "OrderViewModel"
-Cohesion: 0.13
+Cohesion: 0.12
 Nodes (7): AndroidViewModel, OrderViewModel, Factory, Application, StateFlow, T, ViewModelProvider
 
 ### Community 3 - "SeallDatabase"
@@ -77,19 +78,19 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 9 - "Order"
-Cohesion: 0.11
-Nodes (8): Flow, OrderDao, Order, Modifier, OrderCard(), HomeTab(), Modifier, CsvHelper
+Cohesion: 0.14
+Nodes (7): Flow, OrderDao, Order, Modifier, OrderCard(), HomeTab(), Modifier
 
 ### Community 10 - "ArchivesTab.kt"
 Cohesion: 0.27
 Nodes (6): ArchivedDay, ArchivedDayCard(), ArchivedDayDetailView(), ArchivesTab(), Modifier, DateUtils
 
-### Community 11 - "MainScreen"
-Cohesion: 0.17
-Nodes (14): MainActivity, QuickEditDialog(), RapidEntryWizardModal(), AppTab, ARCHIVES, DASHBOARD, HOME, STOCKS (+6 more)
+### Community 11 - "MainScreen.kt"
+Cohesion: 0.15
+Nodes (18): MainActivity, QuickEditDialog(), RapidEntryWizardModal(), AppTab, ARCHIVES, DASHBOARD, HOME, STOCKS (+10 more)
 
 ### Community 12 - "StockIngredient"
-Cohesion: 0.20
+Cohesion: 0.18
 Nodes (3): Flow, StockIngredientDao, StockIngredient
 
 ### Community 13 - "DashboardTab.kt"
@@ -107,22 +108,22 @@ Nodes (5): Color, Modifier, MetricCard(), OrderRowCard(), TestThemeScreen()
 ## Knowledge Gaps
 - **7 isolated node(s):** `HOME`, `DASHBOARD`, `ARCHIVES`, `STOCKS`, `TODAY` (+2 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 35 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Order` connect `Order` to `OrderViewModel`, `SeallDatabase`, `OrderRepository`, `ArchivesTab.kt`, `MainScreen`, `DashboardTab.kt`, `StockItem`, `TestThemeScreen.kt`?**
-  _High betweenness centrality (0.363) - this node is a cross-community bridge._
-- **Why does `OrderViewModel` connect `OrderViewModel` to `Ingredient`, `Order`, `MainScreen`, `StockIngredient`, `StockItem`, `TestThemeScreen.kt`?**
-  _High betweenness centrality (0.206) - this node is a cross-community bridge._
-- **Why does `OrderRepository` connect `OrderRepository` to `Ingredient`, `OrderViewModel`, `Order`, `StockIngredient`, `StockItem`?**
-  _High betweenness centrality (0.153) - this node is a cross-community bridge._
+- **Why does `Order` connect `Order` to `OrderViewModel`, `SeallDatabase`, `OrderRepository`, `ArchivesTab.kt`, `MainScreen.kt`, `DashboardTab.kt`, `StockItem`, `TestThemeScreen.kt`, `CsvHelper`?**
+  _High betweenness centrality (0.320) - this node is a cross-community bridge._
+- **Why does `OrderViewModel` connect `OrderViewModel` to `Ingredient`, `Order`, `MainScreen.kt`, `StockIngredient`, `StockItem`, `TestThemeScreen.kt`?**
+  _High betweenness centrality (0.192) - this node is a cross-community bridge._
+- **Why does `StockItem` connect `StockItem` to `OrderViewModel`, `SeallDatabase`, `OrderRepository`, `Order`, `MainScreen.kt`, `CsvHelper`?**
+  _High betweenness centrality (0.165) - this node is a cross-community bridge._
 - **What connects `HOME`, `DASHBOARD`, `ARCHIVES` to the rest of the system?**
   _7 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `OrderViewModel` be split into smaller, more focused modules?**
-  _Cohesion score 0.13438735177865613 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12 - nodes in this community are weakly interconnected._
 - **Should `Order` be split into smaller, more focused modules?**
-  _Cohesion score 0.11363636363636363 - nodes in this community are weakly interconnected._
-- **Should `StockItem` be split into smaller, more focused modules?**
-  _Cohesion score 0.14153846153846153 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13756613756613756 - nodes in this community are weakly interconnected._
+- **Should `MainScreen.kt` be split into smaller, more focused modules?**
+  _Cohesion score 0.14624505928853754 - nodes in this community are weakly interconnected._
