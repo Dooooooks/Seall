@@ -106,9 +106,3 @@ The application persists data across four interconnected Room entities:
    ./gradlew testDebugUnitTest
    ```
 
----
-
-## 🤍 Dedication
-
-> *"For the person who is always doing her best, I hope that every day is a profit day!"*  
-> — **Lloydie**
