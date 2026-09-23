@@ -56,6 +56,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.seall.data.model.Ingredient
 import com.example.seall.data.model.Order
+import com.example.seall.data.model.StockIngredient
+import com.example.seall.data.model.StockItem
 import com.example.seall.ui.theme.SeallDarkContrast
 import com.example.seall.ui.theme.SeallPaidGreen
 import com.example.seall.ui.theme.SeallPaidGreenContainer
@@ -63,6 +65,7 @@ import com.example.seall.ui.theme.SeallPrimary
 import com.example.seall.ui.theme.SeallUnpaidAmber
 import com.example.seall.ui.theme.SeallUnpaidAmberContainer
 import com.example.seall.util.DateUtils
+import com.example.seall.util.IngredientCostHelper
 import java.util.Locale
 
 data class ArchivedDay(
@@ -83,6 +86,8 @@ data class ArchivedDay(
 fun ArchivesTab(
     allOrders: List<Order>,
     allIngredients: List<Ingredient> = emptyList(),
+    stocks: List<StockItem> = emptyList(),
+    stockIngredients: List<StockIngredient> = emptyList(),
     onDeleteArchive: (startOfDay: Long, endOfDay: Long) -> Unit,
     onTogglePaid: (Order) -> Unit,
     modifier: Modifier = Modifier
@@ -93,7 +98,7 @@ fun ArchivesTab(
     val startOfToday = remember { DateUtils.getStartOfDay() }
 
     // Group past orders and ingredients into archived daily dashboards
-    val archives = remember(allOrders, allIngredients) {
+    val archives = remember(allOrders, allIngredients, stocks, stockIngredients) {
         val pastOrders = allOrders.filter { it.createdAt < startOfToday }
         val pastIngredients = allIngredients.filter { it.createdAt < startOfToday }
         val allDayStarts = (pastOrders.map { DateUtils.getStartOfDay(it.createdAt) } +
@@ -104,7 +109,9 @@ fun ArchivesTab(
             val dayOrders = pastOrders.filter { it.createdAt in dayStart..dayEnd }
             val dayIngredients = pastIngredients.filter { it.createdAt in dayStart..dayEnd }
             val gross = dayOrders.sumOf { it.price }
-            val ingredientsCost = dayIngredients.sumOf { it.price }
+            val generalIngredientsCost = dayIngredients.sumOf { it.price }
+            val ordersIngredientsCost = IngredientCostHelper.calculateTotalOrdersIngredientsCost(dayOrders, stocks, stockIngredients)
+            val ingredientsCost = generalIngredientsCost + ordersIngredientsCost
 
             if (dayOrders.isEmpty() && dayIngredients.isEmpty()) {
                 null

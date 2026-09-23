@@ -27,6 +27,8 @@ import androidx.compose.material.icons.filled.AttachMoney
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircleOutline
 import androidx.compose.material.icons.filled.Egg
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.FileDownload
 import androidx.compose.material.icons.filled.FileUpload
 import androidx.compose.material.icons.filled.HourglassEmpty
@@ -40,6 +42,9 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -58,6 +63,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.seall.data.model.Ingredient
 import com.example.seall.data.model.Order
+import com.example.seall.data.model.StockIngredient
+import com.example.seall.data.model.StockItem
 import com.example.seall.ui.theme.SeallDarkContrast
 import com.example.seall.ui.theme.SeallPaidGreen
 import com.example.seall.ui.theme.SeallPaidGreenContainer
@@ -66,6 +73,9 @@ import com.example.seall.ui.theme.SeallUnpaidAmber
 import com.example.seall.ui.theme.SeallUnpaidAmberContainer
 import com.example.seall.util.CsvHelper
 import com.example.seall.util.DateUtils
+import com.example.seall.util.IngredientCostHelper
+import com.example.seall.util.IngredientUsageSummary
+import com.example.seall.util.ProductRecipeSummary
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -86,6 +96,10 @@ data class ClientSettlement(
 fun DashboardTab(
     allOrders: List<Order>,
     allIngredients: List<Ingredient> = emptyList(),
+    stocks: List<StockItem> = emptyList(),
+    stockIngredients: List<StockIngredient> = emptyList(),
+    deductIngredients: Boolean = true,
+    onToggleDeductIngredients: (Boolean) -> Unit = {},
     onMarkAsPaid: (Order) -> Unit,
     onImportOrders: (List<Order>) -> Unit = {},
     modifier: Modifier = Modifier
@@ -154,7 +168,7 @@ fun DashboardTab(
         displayOrders.filter { !it.isPaid }
     }
 
-    val displayIngredients = remember(allIngredients, selectedPeriod) {
+    val displayGeneralIngredients = remember(allIngredients, selectedPeriod) {
         if (selectedPeriod == DashboardPeriod.TODAY) {
             allIngredients.filter { it.createdAt in startOfToday..endOfToday }
         } else {
@@ -166,12 +180,28 @@ fun DashboardTab(
         displayOrders.sumOf { it.totalItemCount }
     }
 
-    val totalIngredientsCost = remember(displayIngredients) {
-        displayIngredients.sumOf { it.price }
+    val ordersIngredientsCost = remember(displayOrders, stocks, stockIngredients) {
+        IngredientCostHelper.calculateTotalOrdersIngredientsCost(displayOrders, stocks, stockIngredients)
+    }
+
+    val generalIngredientsCost = remember(displayGeneralIngredients) {
+        displayGeneralIngredients.sumOf { it.price }
+    }
+
+    val totalIngredientsCost = remember(ordersIngredientsCost, generalIngredientsCost) {
+        ordersIngredientsCost + generalIngredientsCost
     }
 
     val totalEarnings = remember(combinedTotal, totalIngredientsCost) {
         combinedTotal - totalIngredientsCost
+    }
+
+    val ingredientUsages = remember(displayOrders, stocks, stockIngredients) {
+        IngredientCostHelper.computeIngredientUsages(displayOrders, stocks, stockIngredients)
+    }
+
+    val productRecipeSummaries = remember(stocks, stockIngredients) {
+        IngredientCostHelper.computeProductRecipeSummaries(stocks, stockIngredients)
     }
 
     // Group pending settlement by customer name (combining totals)
@@ -251,30 +281,123 @@ fun DashboardTab(
             }
         }
 
+        // Revenue Deduction Toggle: Subtract Ingredients from Revenue
+        item {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(14.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f)
+                )
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onToggleDeductIngredients(!deductIngredients) }
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(34.dp)
+                                .clip(CircleShape)
+                                .background(
+                                    if (deductIngredients) SeallPaidGreenContainer else MaterialTheme.colorScheme.surfaceVariant
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = if (deductIngredients) Icons.Default.Savings else Icons.Default.AttachMoney,
+                                contentDescription = null,
+                                tint = if (deductIngredients) SeallPaidGreen else MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(18.dp)
+                            )
+                        }
+                        Column {
+                            Text(
+                                text = "Subtract Ingredients Cost",
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.SemiBold,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Text(
+                                text = if (deductIngredients)
+                                    "Displaying Net Revenue (Gross − Ingredients)"
+                                else
+                                    "Displaying Gross Revenue (before ingredients)",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                fontSize = 11.sp
+                            )
+                        }
+                    }
+
+                    Switch(
+                        checked = deductIngredients,
+                        onCheckedChange = onToggleDeductIngredients,
+                        colors = SwitchDefaults.colors(
+                            checkedThumbColor = SeallDarkContrast,
+                            checkedTrackColor = SeallPrimary,
+                            uncheckedThumbColor = MaterialTheme.colorScheme.outline,
+                            uncheckedTrackColor = MaterialTheme.colorScheme.surfaceVariant
+                        )
+                    )
+                }
+            }
+        }
+
         // Metrics Grid / Row
         item {
+            val periodLabel = if (selectedPeriod == DashboardPeriod.TODAY) "Today's" else "Lifetime"
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                // Primary Hero Card: Total Earnings (Net Profit)
-                AnalyticsHeroCard(
-                    title = if (selectedPeriod == DashboardPeriod.TODAY) "Today's Total Earnings" else "Lifetime Total Earnings",
-                    value = String.format(Locale.US, "₱%.2f", totalEarnings),
-                    icon = Icons.Default.Savings,
-                    accentColor = if (totalEarnings >= 0) SeallPaidGreen else MaterialTheme.colorScheme.error,
-                    subtitle = "Gross ₱${String.format(Locale.US, "%.2f", combinedTotal)} ($totalItemsSold items) − Ingredients ₱${String.format(Locale.US, "%.2f", totalIngredientsCost)}"
-                )
+                // Primary Hero Card: Net or Gross depending on toggle
+                if (deductIngredients) {
+                    AnalyticsHeroCard(
+                        title = "$periodLabel Total Earnings (Net)",
+                        value = String.format(Locale.US, "₱%.2f", totalEarnings),
+                        icon = Icons.Default.Savings,
+                        accentColor = if (totalEarnings >= 0) SeallPaidGreen else MaterialTheme.colorScheme.error,
+                        subtitle = "Gross ₱${String.format(Locale.US, "%.2f", combinedTotal)} ($totalItemsSold items) − Ingredients ₱${String.format(Locale.US, "%.2f", totalIngredientsCost)}"
+                    )
+                } else {
+                    AnalyticsHeroCard(
+                        title = "$periodLabel Gross Revenue",
+                        value = String.format(Locale.US, "₱%.2f", combinedTotal),
+                        icon = Icons.AutoMirrored.Filled.TrendingUp,
+                        accentColor = SeallPrimary,
+                        subtitle = "Full sales revenue before deductions ($totalItemsSold items) • Ingredients cost: ₱${String.format(Locale.US, "%.2f", totalIngredientsCost)}"
+                    )
+                }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    AnalyticsMiniCard(
-                        title = "Gross Sales",
-                        value = String.format(Locale.US, "₱%.2f", combinedTotal),
-                        icon = Icons.AutoMirrored.Filled.TrendingUp,
-                        accentColor = SeallPrimary,
-                        containerColor = SeallPrimary.copy(alpha = 0.2f),
-                        modifier = Modifier.weight(1f)
-                    )
+                    if (deductIngredients) {
+                        AnalyticsMiniCard(
+                            title = "Gross Sales",
+                            value = String.format(Locale.US, "₱%.2f", combinedTotal),
+                            icon = Icons.AutoMirrored.Filled.TrendingUp,
+                            accentColor = SeallPrimary,
+                            containerColor = SeallPrimary.copy(alpha = 0.2f),
+                            modifier = Modifier.weight(1f)
+                        )
+                    } else {
+                        AnalyticsMiniCard(
+                            title = "Net Revenue",
+                            value = String.format(Locale.US, "₱%.2f", totalEarnings),
+                            icon = Icons.Default.Savings,
+                            accentColor = if (totalEarnings >= 0) SeallPaidGreen else MaterialTheme.colorScheme.error,
+                            containerColor = if (totalEarnings >= 0) SeallPaidGreenContainer else MaterialTheme.colorScheme.errorContainer,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
 
                     AnalyticsMiniCard(
                         title = "Ingredients Cost",
@@ -309,6 +432,17 @@ fun DashboardTab(
                     )
                 }
             }
+        }
+
+        // Ingredients Breakdown Section
+        item {
+            IngredientsBreakdownCard(
+                period = selectedPeriod,
+                ingredientUsages = ingredientUsages,
+                totalIngredientsCost = totalIngredientsCost,
+                productRecipeSummaries = productRecipeSummaries,
+                hasStockIngredients = stockIngredients.isNotEmpty()
+            )
         }
 
 
@@ -632,4 +766,254 @@ private fun DebtorRowCard(
         }
     }
 }
+
+@Composable
+private fun IngredientsBreakdownCard(
+    period: DashboardPeriod,
+    ingredientUsages: List<IngredientUsageSummary>,
+    totalIngredientsCost: Double,
+    productRecipeSummaries: List<ProductRecipeSummary>,
+    hasStockIngredients: Boolean
+) {
+    var isExpanded by remember { mutableStateOf(false) }
+    var activeSubTab by remember { mutableStateOf(0) } // 0 = Used in sales, 1 = Product Recipes
+
+    val periodLabel = if (period == DashboardPeriod.TODAY) "Today" else "Lifetime"
+
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+    ) {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { isExpanded = !isExpanded }
+                    .padding(horizontal = 16.dp, vertical = 14.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(34.dp)
+                            .clip(CircleShape)
+                            .background(SeallUnpaidAmberContainer),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Egg,
+                            contentDescription = null,
+                            tint = SeallUnpaidAmber,
+                            modifier = Modifier.size(18.dp)
+                        )
+                    }
+                    Column {
+                        Text(
+                            text = "Ingredients Breakdown",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                        Text(
+                            text = if (totalIngredientsCost > 0.0) {
+                                "${ingredientUsages.size} ingredients used • ${String.format(Locale.US, "₱%.2f", totalIngredientsCost)}"
+                            } else if (hasStockIngredients) {
+                                "${productRecipeSummaries.count { it.ingredients.isNotEmpty() }} products with recipes configured"
+                            } else {
+                                "Configure recipes in Stocks tab"
+                            },
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            fontSize = 11.sp
+                        )
+                    }
+                }
+
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    if (totalIngredientsCost > 0.0) {
+                        Text(
+                            text = String.format(Locale.US, "₱%.2f", totalIngredientsCost),
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = SeallUnpaidAmber
+                        )
+                    }
+                    Icon(
+                        imageVector = if (isExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                        contentDescription = if (isExpanded) "Collapse" else "Expand",
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+
+            if (isExpanded) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f))
+                        .padding(horizontal = 14.dp, vertical = 12.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    // Sub-tab toggles if there are recipes
+                    if (productRecipeSummaries.any { it.ingredients.isNotEmpty() }) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+                                .padding(3.dp),
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            val tabs = listOf("Used in Sales ($periodLabel)", "Product Recipes")
+                            tabs.forEachIndexed { index, label ->
+                                val isSelected = activeSubTab == index
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clip(RoundedCornerShape(6.dp))
+                                        .background(if (isSelected) SeallPrimary else Color.Transparent)
+                                        .clickable { activeSubTab = index }
+                                        .padding(vertical = 6.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = label,
+                                        fontSize = 11.sp,
+                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                        color = if (isSelected) SeallDarkContrast else MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    if (activeSubTab == 0) {
+                        if (ingredientUsages.isEmpty()) {
+                            Text(
+                                text = "No ingredients used in sales for $periodLabel yet. When orders with recipes are placed, ingredients and costs will automatically show up here.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(vertical = 4.dp)
+                            )
+                        } else {
+                            ingredientUsages.forEach { usage ->
+                                Surface(
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = MaterialTheme.colorScheme.surface,
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(horizontal = 12.dp, vertical = 8.dp),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Column(modifier = Modifier.weight(1f)) {
+                                            Text(
+                                                text = usage.ingredientName,
+                                                style = MaterialTheme.typography.bodyMedium,
+                                                fontWeight = FontWeight.SemiBold,
+                                                color = MaterialTheme.colorScheme.onSurface
+                                            )
+                                            Text(
+                                                text = "${usage.stockNames.joinToString(", ")} • ${usage.quantityDescriptions.joinToString(", ")}",
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                fontSize = 11.sp
+                                            )
+                                        }
+                                        Text(
+                                            text = String.format(Locale.US, "₱%.2f", usage.totalCost),
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            fontWeight = FontWeight.Bold,
+                                            color = SeallUnpaidAmber
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        // Product Recipes tab
+                        val withRecipes = productRecipeSummaries.filter { it.ingredients.isNotEmpty() }
+                        if (withRecipes.isEmpty()) {
+                            Text(
+                                text = "No products have recipe ingredients configured yet. Add them in the Stocks tab.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        } else {
+                            withRecipes.forEach { summary ->
+                                Surface(
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = MaterialTheme.colorScheme.surface,
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Column(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(horizontal = 12.dp, vertical = 8.dp),
+                                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween,
+                                            verticalAlignment = Alignment.CenterVertically
+                                        ) {
+                                            Text(
+                                                text = summary.stock.name,
+                                                style = MaterialTheme.typography.bodyMedium,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.onSurface
+                                            )
+                                            Text(
+                                                text = "Cost: ${String.format(Locale.US, "₱%.2f", summary.totalRecipeCost)} / unit",
+                                                style = MaterialTheme.typography.bodySmall,
+                                                fontWeight = FontWeight.SemiBold,
+                                                color = SeallUnpaidAmber
+                                            )
+                                        }
+                                        Text(
+                                            text = summary.ingredients.joinToString(", ") { "${it.name} (${it.quantity}, ₱${String.format(Locale.US, "%.2f", it.cost)})" },
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            fontSize = 11.sp
+                                        )
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween
+                                        ) {
+                                            Text(
+                                                text = "Price: ₱${String.format(Locale.US, "%.2f", summary.stock.price)}",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                            )
+                                            Text(
+                                                text = "Profit margin: ₱${String.format(Locale.US, "%.2f", summary.profitPerUnit)}",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                fontWeight = FontWeight.Bold,
+                                                color = if (summary.profitPerUnit >= 0) SeallPaidGreen else MaterialTheme.colorScheme.error
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 

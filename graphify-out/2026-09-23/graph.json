@@ -17,19 +17,6 @@
       "source_location": "L12"
     },
     {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase",
-      "label": "SeallDatabase",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": "sealldatabase",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L14"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_data_model_ingredient_ingredient",
       "label": "Ingredient",
       "_callable": true,
@@ -56,7 +43,7 @@
       "source_location": "L21"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310",
       "label": "Factory",
       "_callable": true,
       "_callable_class": true,
@@ -66,7 +53,7 @@
       "file_type": "code",
       "norm_label": "factory",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L322"
+      "source_location": "L310"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_archivestab_archivedday",
@@ -79,7 +66,7 @@
       "file_type": "code",
       "norm_label": "archivedday",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L71"
+      "source_location": "L68"
     },
     {
       "id": "app_src_main_java_com_example_seall_util_dateutils_dateutils",
@@ -157,7 +144,7 @@
       "file_type": "code",
       "norm_label": "clientsettlement",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L87"
+      "source_location": "L77"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardperiod",
@@ -170,7 +157,7 @@
       "file_type": "code",
       "norm_label": "dashboardperiod",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L83"
+      "source_location": "L73"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_local_stockdao_stockdao",
@@ -197,58 +184,6 @@
       "norm_label": "stockitem",
       "source_file": "app/src/main/java/com/example/seall/data/model/StockItem.kt",
       "source_location": "L6"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "label": "IngredientCostHelper",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "StockItem",
-      "file_type": "code",
-      "norm_label": "ingredientcosthelper",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L24"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientusagesummary",
-      "label": "IngredientUsageSummary",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "StockItem",
-      "file_type": "code",
-      "norm_label": "ingredientusagesummary",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_mutableusage",
-      "label": "MutableUsage",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "StockItem",
-      "file_type": "code",
-      "norm_label": "mutableusage",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L185"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_productrecipesummary",
-      "label": "ProductRecipeSummary",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "StockItem",
-      "file_type": "code",
-      "norm_label": "productrecipesummary",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L17"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_model_orderitem_orderitem",
@@ -290,6 +225,19 @@
       "source_location": "L187"
     },
     {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase",
+      "label": "SeallDatabase",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": "sealldatabase",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L14"
+    },
+    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository",
       "label": "OrderRepository",
       "_callable": true,
@@ -327,19 +275,6 @@
       "norm_label": "order",
       "source_file": "app/src/main/java/com/example/seall/data/model/Order.kt",
       "source_location": "L18"
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "label": "IngredientCostHelperTest",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": "ingredientcosthelpertest",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L9"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_local_ingredientdao_ingredientdao_deleteingredient",
@@ -426,66 +361,6 @@
       "source_location": "L24"
     },
     {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_getinstance",
-      "label": ".getInstance()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": ".getinstance()",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L72"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_ingredientdao",
-      "label": ".ingredientDao()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": ".ingredientdao()",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L23"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_orderdao",
-      "label": ".orderDao()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": ".orderdao()",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L21"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_stockdao",
-      "label": ".stockDao()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": ".stockdao()",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L22"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_stockingredientdao",
-      "label": ".stockIngredientDao()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": ".stockingredientdao()",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L24"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deleteingredient",
       "label": ".deleteIngredient()",
       "_callable": true,
@@ -531,7 +406,7 @@
       "file_type": "code",
       "norm_label": ".addingredient()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L296"
+      "source_location": "L284"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deleteingredient",
@@ -543,7 +418,7 @@
       "file_type": "code",
       "norm_label": ".deleteingredient()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L314"
+      "source_location": "L302"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updateingredient",
@@ -555,43 +430,7 @@
       "file_type": "code",
       "norm_label": ".updateingredient()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L305"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_metriccard",
-      "label": "MetricCard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": "metriccard()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
-      "source_location": "L316"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_orderrowcard",
-      "label": "OrderRowCard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": "orderrowcard()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
-      "source_location": "L357"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_testthemescreen",
-      "label": "TestThemeScreen()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": "testthemescreen()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
-      "source_location": "L63"
+      "source_location": "L293"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_addorder",
@@ -603,7 +442,7 @@
       "file_type": "code",
       "norm_label": ".addorder()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L163"
+      "source_location": "L151"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_addstock",
@@ -615,19 +454,7 @@
       "file_type": "code",
       "norm_label": ".addstock()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L218"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_addstockingredient",
-      "label": ".addStockIngredient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".addstockingredient()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L256"
+      "source_location": "L206"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_adjuststockquantity",
@@ -639,7 +466,7 @@
       "file_type": "code",
       "norm_label": ".adjuststockquantity()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L242"
+      "source_location": "L230"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_closewizard",
@@ -651,7 +478,7 @@
       "file_type": "code",
       "norm_label": ".closewizard()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L122"
+      "source_location": "L110"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deleteorder",
@@ -663,7 +490,7 @@
       "file_type": "code",
       "norm_label": ".deleteorder()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L173"
+      "source_location": "L161"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deleteordersforday",
@@ -675,31 +502,7 @@
       "file_type": "code",
       "norm_label": ".deleteordersforday()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L109"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deletestock",
-      "label": ".deleteStock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".deletestock()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L249"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deletestockingredient",
-      "label": ".deleteStockIngredient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".deletestockingredient()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L289"
+      "source_location": "L97"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_importorders",
@@ -711,19 +514,7 @@
       "file_type": "code",
       "norm_label": ".importorders()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L196"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_importstockingredients",
-      "label": ".importStockIngredients()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".importstockingredients()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L210"
+      "source_location": "L184"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_importstocks",
@@ -735,7 +526,7 @@
       "file_type": "code",
       "norm_label": ".importstocks()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L203"
+      "source_location": "L191"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_openwizard",
@@ -747,7 +538,7 @@
       "file_type": "code",
       "norm_label": ".openwizard()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L117"
+      "source_location": "L105"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory",
@@ -759,10 +550,10 @@
       "file_type": "code",
       "norm_label": ".providefactory()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L321"
+      "source_location": "L309"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322_create",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310_create",
       "label": ".create()",
       "_callable": true,
       "_origin": "ast",
@@ -771,19 +562,7 @@
       "file_type": "code",
       "norm_label": ".create()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L323"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_setdeductingredients",
-      "label": ".setDeductIngredients()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".setdeductingredients()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L105"
+      "source_location": "L311"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_submitorder",
@@ -795,19 +574,7 @@
       "file_type": "code",
       "norm_label": ".submitorder()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L127"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_toggledeductingredients",
-      "label": ".toggleDeductIngredients()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".toggledeductingredients()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L101"
+      "source_location": "L115"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_togglepayment",
@@ -819,7 +586,7 @@
       "file_type": "code",
       "norm_label": ".togglepayment()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L167"
+      "source_location": "L155"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updatecustomername",
@@ -831,7 +598,7 @@
       "file_type": "code",
       "norm_label": ".updatecustomername()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L179"
+      "source_location": "L167"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updateorderprice",
@@ -843,7 +610,7 @@
       "file_type": "code",
       "norm_label": ".updateorderprice()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L188"
+      "source_location": "L176"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updatestock",
@@ -855,19 +622,7 @@
       "file_type": "code",
       "norm_label": ".updatestock()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L227"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updatestockingredient",
-      "label": ".updateStockIngredient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": ".updatestockingredient()",
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L273"
+      "source_location": "L215"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updatestockquantity",
@@ -879,7 +634,7 @@
       "file_type": "code",
       "norm_label": ".updatestockquantity()",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L236"
+      "source_location": "L224"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_archivestab_archiveddaycard",
@@ -891,7 +646,7 @@
       "file_type": "code",
       "norm_label": "archiveddaycard()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L277"
+      "source_location": "L270"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_archivestab_archiveddaydetailview",
@@ -903,7 +658,7 @@
       "file_type": "code",
       "norm_label": "archiveddaydetailview()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L451"
+      "source_location": "L444"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_archivestab_archivestab",
@@ -915,7 +670,7 @@
       "file_type": "code",
       "norm_label": "archivestab()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85"
+      "source_location": "L82"
     },
     {
       "id": "app_src_main_java_com_example_seall_util_dateutils_dateutils_formatdate",
@@ -1023,7 +778,7 @@
       "file_type": "code",
       "norm_label": "backupcard()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L534"
+      "source_location": "L527"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_mainscreen_backupdrawercontent",
@@ -1035,7 +790,7 @@
       "file_type": "code",
       "norm_label": "backupdrawercontent()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L469"
+      "source_location": "L462"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_mainscreen_mainscreen",
@@ -1059,7 +814,7 @@
       "file_type": "code",
       "norm_label": "timestamp()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L465"
+      "source_location": "L458"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_theme_theme_sealltheme",
@@ -1158,6 +913,18 @@
       "source_location": "L27"
     },
     {
+      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deletestockingredient",
+      "label": ".deleteStockIngredient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "StockIngredient",
+      "file_type": "code",
+      "norm_label": ".deletestockingredient()",
+      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
+      "source_location": "L52"
+    },
+    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_insertstockingredient",
       "label": ".insertStockIngredient()",
       "_callable": true,
@@ -1170,64 +937,64 @@
       "source_location": "L46"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_quickstockquantitydialog",
-      "label": "QuickStockQuantityDialog()",
+      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_updatestockingredient",
+      "label": ".updateStockIngredient()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": "StockIngredient",
       "file_type": "code",
-      "norm_label": "quickstockquantitydialog()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
-      "source_location": "L850"
+      "norm_label": ".updatestockingredient()",
+      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
+      "source_location": "L49"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockcard",
-      "label": "StockCard()",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_addstockingredient",
+      "label": ".addStockIngredient()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": "StockIngredient",
       "file_type": "code",
-      "norm_label": "stockcard()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
-      "source_location": "L467"
+      "norm_label": ".addstockingredient()",
+      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
+      "source_location": "L244"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockformdialog",
-      "label": "StockFormDialog()",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deletestockingredient",
+      "label": ".deleteStockIngredient()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": "StockIngredient",
       "file_type": "code",
-      "norm_label": "stockformdialog()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
-      "source_location": "L1012"
+      "norm_label": ".deletestockingredient()",
+      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
+      "source_location": "L277"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockingredientformdialog",
-      "label": "StockIngredientFormDialog()",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_importstockingredients",
+      "label": ".importStockIngredients()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": "StockIngredient",
       "file_type": "code",
-      "norm_label": "stockingredientformdialog()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
-      "source_location": "L1217"
+      "norm_label": ".importstockingredients()",
+      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
+      "source_location": "L198"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockstab",
-      "label": "StocksTab()",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_updatestockingredient",
+      "label": ".updateStockIngredient()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": "StockIngredient",
       "file_type": "code",
-      "norm_label": "stockstab()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
-      "source_location": "L85"
+      "norm_label": ".updatestockingredient()",
+      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
+      "source_location": "L261"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_analyticsherocard",
@@ -1239,7 +1006,7 @@
       "file_type": "code",
       "norm_label": "analyticsherocard()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L566"
+      "source_location": "L432"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_analyticsminicard",
@@ -1251,7 +1018,7 @@
       "file_type": "code",
       "norm_label": "analyticsminicard()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L627"
+      "source_location": "L493"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardtab",
@@ -1263,7 +1030,7 @@
       "file_type": "code",
       "norm_label": "dashboardtab()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95"
+      "source_location": "L85"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_debtorrowcard",
@@ -1275,19 +1042,7 @@
       "file_type": "code",
       "norm_label": "debtorrowcard()",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L684"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_ingredientsbreakdowncard",
-      "label": "IngredientsBreakdownCard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "DashboardTab.kt",
-      "file_type": "code",
-      "norm_label": "ingredientsbreakdowncard()",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L770"
+      "source_location": "L550"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_local_stockdao_stockdao_deletestock",
@@ -1362,6 +1117,30 @@
       "source_location": "L24"
     },
     {
+      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deletestock",
+      "label": ".deleteStock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "StockItem",
+      "file_type": "code",
+      "norm_label": ".deletestock()",
+      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
+      "source_location": "L36"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_insertstock",
+      "label": ".insertStock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "StockItem",
+      "file_type": "code",
+      "norm_label": ".insertstock()",
+      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
+      "source_location": "L30"
+    },
+    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_insertstocks",
       "label": ".insertStocks()",
       "_callable": true,
@@ -1386,76 +1165,76 @@
       "source_location": "L34"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "label": ".calculateOrderIngredientsCost()",
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_quickstockquantitydialog",
+      "label": "QuickStockQuantityDialog()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": ".calculateorderingredientscost()",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L98"
+      "norm_label": "quickstockquantitydialog()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
+      "source_location": "L850"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculatetotalordersingredientscost",
-      "label": ".calculateTotalOrdersIngredientsCost()",
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockcard",
+      "label": "StockCard()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": ".calculatetotalordersingredientscost()",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L114"
+      "norm_label": "stockcard()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
+      "source_location": "L467"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "label": ".computeIngredientUsages()",
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockformdialog",
+      "label": "StockFormDialog()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": ".computeingredientusages()",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L125"
+      "norm_label": "stockformdialog()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
+      "source_location": "L1012"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeproductrecipesummaries",
-      "label": ".computeProductRecipeSummaries()",
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockingredientformdialog",
+      "label": "StockIngredientFormDialog()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": ".computeproductrecipesummaries()",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L169"
+      "norm_label": "stockingredientformdialog()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
+      "source_location": "L1217"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "label": ".findIngredientsForOrderItem()",
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_stockstab",
+      "label": "StocksTab()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": ".findingredientsfororderitem()",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L70"
+      "norm_label": "stockstab()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
+      "source_location": "L85"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "label": ".resolveOrderItems()",
+      "id": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deletestock",
+      "label": ".deleteStock()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": ".resolveorderitems()",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L31"
+      "norm_label": ".deletestock()",
+      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
+      "source_location": "L237"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_model_orderitem_orderitem_formatsummary",
@@ -1540,6 +1319,42 @@
       "norm_label": ".totalprice()",
       "source_file": "app/src/main/java/com/example/seall/data/model/OrderItem.kt",
       "source_location": "L61"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_metriccard",
+      "label": "MetricCard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "TestThemeScreen.kt",
+      "file_type": "code",
+      "norm_label": "metriccard()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
+      "source_location": "L316"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_orderrowcard",
+      "label": "OrderRowCard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "TestThemeScreen.kt",
+      "file_type": "code",
+      "norm_label": "orderrowcard()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
+      "source_location": "L357"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_testthemescreen",
+      "label": "TestThemeScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "TestThemeScreen.kt",
+      "file_type": "code",
+      "norm_label": "testthemescreen()",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
+      "source_location": "L63"
     },
     {
       "id": "app_src_main_java_com_example_seall_util_csvhelper_csvhelper_escapecsv",
@@ -1662,6 +1477,66 @@
       "source_location": "L90"
     },
     {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_getinstance",
+      "label": ".getInstance()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": ".getinstance()",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L72"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_ingredientdao",
+      "label": ".ingredientDao()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": ".ingredientdao()",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_orderdao",
+      "label": ".orderDao()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": ".orderdao()",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L21"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_stockdao",
+      "label": ".stockDao()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": ".stockdao()",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L22"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase_sealldatabase_stockingredientdao",
+      "label": ".stockIngredientDao()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": ".stockingredientdao()",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L24"
+    },
+    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deleteingredientbyid",
       "label": ".deleteIngredientById()",
       "_callable": true,
@@ -1734,18 +1609,6 @@
       "source_location": "L92"
     },
     {
-      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deletestock",
-      "label": ".deleteStock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "OrderRepository",
-      "file_type": "code",
-      "norm_label": ".deletestock()",
-      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
-      "source_location": "L36"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deletestockbyid",
       "label": ".deleteStockById()",
       "_callable": true,
@@ -1756,18 +1619,6 @@
       "norm_label": ".deletestockbyid()",
       "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
       "source_location": "L38"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_deletestockingredient",
-      "label": ".deleteStockIngredient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "OrderRepository",
-      "file_type": "code",
-      "norm_label": ".deletestockingredient()",
-      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
-      "source_location": "L52"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_getingredientsbydaterange",
@@ -1842,18 +1693,6 @@
       "source_location": "L84"
     },
     {
-      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_insertstock",
-      "label": ".insertStock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "OrderRepository",
-      "file_type": "code",
-      "norm_label": ".insertstock()",
-      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
-      "source_location": "L30"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_searchorders",
       "label": ".searchOrders()",
       "_callable": true,
@@ -1888,18 +1727,6 @@
       "norm_label": ".updateorder()",
       "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
       "source_location": "L86"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository_updatestockingredient",
-      "label": ".updateStockIngredient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "OrderRepository",
-      "file_type": "code",
-      "norm_label": ".updatestockingredient()",
-      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
-      "source_location": "L49"
     },
     {
       "id": "app_src_main_java_com_example_seall_data_local_orderdao_orderdao_deleteorder",
@@ -2118,78 +1945,6 @@
       "source_location": "L47"
     },
     {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculateorderingredientscost_fallbackitemssummary",
-      "label": ".testCalculateOrderIngredientsCost_fallbackItemsSummary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": ".testcalculateorderingredientscost_fallbackitemssummary()",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L31"
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculateorderingredientscost_withitemsjson",
-      "label": ".testCalculateOrderIngredientsCost_withItemsJson()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": ".testcalculateorderingredientscost_withitemsjson()",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L21"
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculatetotalordersingredientscost_multipleorders",
-      "label": ".testCalculateTotalOrdersIngredientsCost_multipleOrders()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": ".testcalculatetotalordersingredientscost_multipleorders()",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L69"
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcomputeingredientusages",
-      "label": ".testComputeIngredientUsages()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": ".testcomputeingredientusages()",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L40"
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcomputeproductrecipesummaries",
-      "label": ".testComputeProductRecipeSummaries()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": ".testcomputeproductrecipesummaries()",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L55"
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testproductwithoutingredients",
-      "label": ".testProductWithoutIngredients()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": ".testproductwithoutingredients()",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L83"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_data_local_ingredientdao",
       "label": "IngredientDao.kt",
       "_origin": "ast",
@@ -2212,17 +1967,6 @@
       "source_location": ""
     },
     {
-      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase",
-      "label": "SeallDatabase.kt",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": "sealldatabase.kt",
-      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
-      "source_location": "L1"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_data_model_ingredient",
       "label": "Ingredient.kt",
       "_origin": "ast",
@@ -2234,26 +1978,15 @@
       "source_location": "L1"
     },
     {
-      "id": "context",
-      "label": "Context",
+      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository",
+      "label": "OrderRepository.kt",
       "_origin": "ast",
       "community": 0,
       "community_name": "Ingredient",
       "file_type": "code",
-      "norm_label": "context",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "roomdatabase",
-      "label": "RoomDatabase",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Ingredient",
-      "file_type": "code",
-      "norm_label": "roomdatabase",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "orderrepository.kt",
+      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
+      "source_location": "L1"
     },
     {
       "id": "androidviewmodel",
@@ -2263,39 +1996,6 @@
       "community_name": "OrderViewModel",
       "file_type": "code",
       "norm_label": "androidviewmodel",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen",
-      "label": "TestThemeScreen.kt",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": "testthemescreen.kt",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_kt_color",
-      "label": "Color",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": "color",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_kt_modifier",
-      "label": "Modifier",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "OrderViewModel",
-      "file_type": "code",
-      "norm_label": "modifier",
       "source_file": "",
       "source_location": ""
     },
@@ -2399,28 +2099,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_components_quickeditdialog",
-      "label": "QuickEditDialog.kt",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "MainScreen.kt",
-      "file_type": "code",
-      "norm_label": "quickeditdialog.kt",
-      "source_file": "app/src/main/java/com/example/seall/ui/components/QuickEditDialog.kt",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_components_rapidentrywizardmodal",
-      "label": "RapidEntryWizardModal.kt",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "MainScreen.kt",
-      "file_type": "code",
-      "norm_label": "rapidentrywizardmodal.kt",
-      "source_file": "app/src/main/java/com/example/seall/ui/components/RapidEntryWizardModal.kt",
-      "source_location": "L1"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_ui_components_seallbottombar",
       "label": "SeallBottomBar.kt",
       "_origin": "ast",
@@ -2509,17 +2187,6 @@
       "source_location": ""
     },
     {
-      "id": "app_src_main_java_com_example_seall_ui_theme_color",
-      "label": "Color.kt",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "MainScreen.kt",
-      "file_type": "code",
-      "norm_label": "color.kt",
-      "source_file": "app/src/main/java/com/example/seall/ui/theme/Color.kt",
-      "source_location": "L1"
-    },
-    {
       "id": "app_src_main_java_com_example_seall_ui_theme_theme",
       "label": "Theme.kt",
       "_origin": "ast",
@@ -2586,39 +2253,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_src_main_java_com_example_seall_data_repository_orderrepository",
-      "label": "OrderRepository.kt",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "StockIngredient",
-      "file_type": "code",
-      "norm_label": "orderrepository.kt",
-      "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab",
-      "label": "StocksTab.kt",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "StockIngredient",
-      "file_type": "code",
-      "norm_label": "stockstab.kt",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_kt_modifier",
-      "label": "Modifier",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "StockIngredient",
-      "file_type": "code",
-      "norm_label": "modifier",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
       "label": "DashboardTab.kt",
       "_origin": "ast",
@@ -2638,7 +2272,7 @@
       "file_type": "code",
       "norm_label": "lifetime",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L84"
+      "source_location": "L74"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardperiod_today",
@@ -2649,7 +2283,7 @@
       "file_type": "code",
       "norm_label": "today",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L84"
+      "source_location": "L74"
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_kt_color",
@@ -2718,14 +2352,58 @@
       "source_location": "L1"
     },
     {
-      "id": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "label": "IngredientCostHelper.kt",
+      "id": "app_src_main_java_com_example_seall_ui_components_quickeditdialog",
+      "label": "QuickEditDialog.kt",
       "_origin": "ast",
       "community": 14,
       "community_name": "StockItem",
       "file_type": "code",
-      "norm_label": "ingredientcosthelper.kt",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
+      "norm_label": "quickeditdialog.kt",
+      "source_file": "app/src/main/java/com/example/seall/ui/components/QuickEditDialog.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_components_rapidentrywizardmodal",
+      "label": "RapidEntryWizardModal.kt",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "StockItem",
+      "file_type": "code",
+      "norm_label": "rapidentrywizardmodal.kt",
+      "source_file": "app/src/main/java/com/example/seall/ui/components/RapidEntryWizardModal.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab",
+      "label": "StocksTab.kt",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "StockItem",
+      "file_type": "code",
+      "norm_label": "stockstab.kt",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/StocksTab.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_stockstab_kt_modifier",
+      "label": "Modifier",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "StockItem",
+      "file_type": "code",
+      "norm_label": "modifier",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_theme_color",
+      "label": "Color.kt",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "StockItem",
+      "file_type": "code",
+      "norm_label": "color.kt",
+      "source_file": "app/src/main/java/com/example/seall/ui/theme/Color.kt",
       "source_location": "L1"
     },
     {
@@ -2747,6 +2425,39 @@
       "community_name": "OrderItem",
       "file_type": "code",
       "norm_label": "jsonobject",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen",
+      "label": "TestThemeScreen.kt",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "TestThemeScreen.kt",
+      "file_type": "code",
+      "norm_label": "testthemescreen.kt",
+      "source_file": "app/src/main/java/com/example/seall/ui/screens/TestThemeScreen.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_kt_color",
+      "label": "Color",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "TestThemeScreen.kt",
+      "file_type": "code",
+      "norm_label": "color",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_ui_screens_testthemescreen_kt_modifier",
+      "label": "Modifier",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "TestThemeScreen.kt",
+      "file_type": "code",
+      "norm_label": "modifier",
       "source_file": "",
       "source_location": ""
     },
@@ -2820,6 +2531,18 @@
       "norm_label": "\ud83d\uddc4\ufe0f database architecture",
       "source_file": "README.md",
       "source_location": "L64"
+    },
+    {
+      "id": "readme_dedication",
+      "label": "\ud83e\udd0d Dedication",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "\u2728 Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83e\udd0d dedication",
+      "source_file": "README.md",
+      "source_location": "L111"
     },
     {
       "id": "readme_dynamic_stock_inventory_control",
@@ -2987,6 +2710,39 @@
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
       "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_seall_data_local_sealldatabase",
+      "label": "SeallDatabase.kt",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": "sealldatabase.kt",
+      "source_file": "app/src/main/java/com/example/seall/data/local/SeallDatabase.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": "context",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "roomdatabase",
+      "label": "RoomDatabase",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "SeallDatabase",
+      "file_type": "code",
+      "norm_label": "roomdatabase",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "app_src_main_java_com_example_seall_ui_theme_type",
@@ -3168,17 +2924,6 @@
       "norm_label": "modifier",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest",
-      "label": "IngredientCostHelperTest.kt",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Order",
-      "file_type": "code",
-      "norm_label": "ingredientcosthelpertest.kt",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L1"
     }
   ],
   "links": [
@@ -3575,7 +3320,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L121",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -3587,7 +3332,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L148",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -3599,7 +3344,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L236",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -3611,7 +3356,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L212",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -3623,7 +3368,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L361",
+      "source_location": "L258",
       "weight": 1.0
     },
     {
@@ -3635,19 +3380,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L383",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_ingredientsbreakdowncard",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L439",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -3659,7 +3392,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L520",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
@@ -3683,7 +3416,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L511",
+      "source_location": "L504",
       "weight": 1.0
     },
     {
@@ -3695,7 +3428,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L292",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -3707,7 +3440,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L304",
+      "source_location": "L303",
       "weight": 1.0
     },
     {
@@ -3719,7 +3452,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L341",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -3731,7 +3464,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L345",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -3743,7 +3476,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L413",
+      "source_location": "L412",
       "weight": 1.0
     },
     {
@@ -3827,7 +3560,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L300",
+      "source_location": "L288",
       "weight": 1.0
     },
     {
@@ -3839,7 +3572,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L164",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -3851,7 +3584,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L222",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -3863,7 +3596,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L262",
+      "source_location": "L250",
       "weight": 1.0
     },
     {
@@ -3875,7 +3608,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L245",
+      "source_location": "L233",
       "weight": 1.0
     },
     {
@@ -3887,7 +3620,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L316",
+      "source_location": "L304",
       "weight": 1.0
     },
     {
@@ -3899,7 +3632,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L175",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -3911,7 +3644,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L251",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -3923,11 +3656,11 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L291",
+      "source_location": "L279",
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322_create",
+      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310_create",
       "target": "app_src_main_java_com_example_seall_data_repository_orderrepository_orderrepository",
       "relation": "calls",
       "_origin": "ast",
@@ -3935,11 +3668,11 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L326",
+      "source_location": "L314",
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322_create",
+      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310_create",
       "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
       "relation": "calls",
       "_origin": "ast",
@@ -3947,7 +3680,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L332",
+      "source_location": "L320",
       "weight": 1.0
     },
     {
@@ -3959,7 +3692,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L148",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -3971,7 +3704,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L159",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -3983,7 +3716,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L309",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -3995,7 +3728,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L231",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -4007,7 +3740,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L278",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -4019,7 +3752,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L238",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -4215,210 +3948,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L103",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L105",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculatetotalordersingredientscost",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L119",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L133",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L135",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_mutableusage",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L139",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientusagesummary",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L156",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeproductrecipesummaries",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_productrecipesummary",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L176",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "target": "app_src_main_java_com_example_seall_data_model_orderitem_orderitem",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L54",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculateorderingredientscost_fallbackitemssummary",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L34",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculateorderingredientscost_withitemsjson",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculatetotalordersingredientscost_multipleorders",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L71",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcomputeingredientusages",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L43",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testproductwithoutingredients",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L85",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testproductwithoutingredients",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L87",
-      "weight": 1.0
-    },
-    {
       "source": "gradlew__entry",
       "target": "gradlew_die",
       "relation": "calls",
@@ -4475,7 +4004,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L99",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -4799,7 +4328,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -4811,31 +4340,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_archivestab_archivestab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_archivestab_archivestab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -4847,7 +4352,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -4859,55 +4364,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_ingredientsbreakdowncard",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientusagesummary",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L770",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_ingredientsbreakdowncard",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_productrecipesummary",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L770",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -5015,7 +4472,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L196",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -5027,7 +4484,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L210",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
@@ -5039,7 +4496,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L203",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -5124,162 +4581,6 @@
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/example/seall/util/CsvHelper.kt",
       "source_location": "L81",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L98",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L98",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculatetotalordersingredientscost",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L114",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculatetotalordersingredientscost",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L114",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculatetotalordersingredientscost",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L114",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeproductrecipesummaries",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeproductrecipesummaries",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -5399,7 +4700,7 @@
         "target_fqn": "androidx.compose.ui.Modifier"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L56",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5504,7 +4805,7 @@
         "target_fqn": "androidx.compose.ui.graphics.Color"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L58",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -5549,7 +4850,7 @@
         "target_fqn": "androidx.compose.ui.graphics.vector.ImageVector"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L59",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -5759,7 +5060,7 @@
         "target_fqn": "com.example.seall.data.model.Ingredient"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L64",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -5879,7 +5180,7 @@
         "target_fqn": "com.example.seall.data.model.Order"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L65",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -5958,36 +5259,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.Order"
-      },
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.Order"
-      },
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
       "source": "app_src_main_java_com_example_seall_ui_components_rapidentrywizardmodal",
       "target": "app_src_main_java_com_example_seall_data_model_orderitem_orderitem",
       "relation": "imports",
@@ -6000,21 +5271,6 @@
       },
       "source_file": "app/src/main/java/com/example/seall/ui/components/RapidEntryWizardModal.kt",
       "source_location": "L78",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_data_model_orderitem_orderitem",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.OrderItem"
-      },
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6060,36 +5316,6 @@
       },
       "source_file": "app/src/main/java/com/example/seall/data/repository/OrderRepository.kt",
       "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_archivestab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockIngredient"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L59",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockIngredient"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -6149,36 +5375,6 @@
         "target_fqn": "com.example.seall.data.model.StockIngredient"
       },
       "source_file": "app/src/main/java/com/example/seall/util/CsvHelper.kt",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockIngredient"
-      },
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest",
-      "target": "app_src_main_java_com_example_seall_data_model_stockingredient_stockingredient",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockIngredient"
-      },
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
       "source_location": "L4",
       "weight": 1.0
     },
@@ -6258,36 +5454,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_ui_screens_archivestab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockItem"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L60",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockItem"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
       "source": "app_src_main_java_com_example_seall_ui_screens_mainscreen",
       "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
       "relation": "imports",
@@ -6344,36 +5510,6 @@
         "target_fqn": "com.example.seall.data.model.StockItem"
       },
       "source_file": "app/src/main/java/com/example/seall/util/CsvHelper.kt",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockItem"
-      },
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest",
-      "target": "app_src_main_java_com_example_seall_data_model_stockitem_stockitem",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.data.model.StockItem"
-      },
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
       "source_location": "L5",
       "weight": 1.0
     },
@@ -6554,7 +5690,7 @@
         "target_fqn": "com.example.seall.util.CsvHelper"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L74",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -6584,7 +5720,7 @@
         "target_fqn": "com.example.seall.util.DateUtils"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L67",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -6599,67 +5735,7 @@
         "target_fqn": "com.example.seall.util.DateUtils"
       },
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L75",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_archivestab",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.util.IngredientCostHelper"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
       "source_location": "L68",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.util.IngredientCostHelper"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L76",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientusagesummary",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.util.IngredientUsageSummary"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_productrecipesummary",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "target_fqn": "com.example.seall.util.ProductRecipeSummary"
-      },
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -7160,7 +6236,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L277",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -7172,7 +6248,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L277",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -7184,7 +6260,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L451",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -7196,7 +6272,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -7208,7 +6284,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L566",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -7220,7 +6296,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L566",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -7232,7 +6308,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L627",
+      "source_location": "L493",
       "weight": 1.0
     },
     {
@@ -7244,7 +6320,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L627",
+      "source_location": "L493",
       "weight": 1.0
     },
     {
@@ -7256,7 +6332,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L627",
+      "source_location": "L493",
       "weight": 1.0
     },
     {
@@ -7268,7 +6344,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -7280,19 +6356,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L684",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_ingredientsbreakdowncard",
-      "target": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_dashboardperiod",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "parameter_type",
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L770",
+      "source_location": "L550",
       "weight": 1.0
     },
     {
@@ -7316,7 +6380,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L534",
+      "source_location": "L527",
       "weight": 1.0
     },
     {
@@ -7436,7 +6500,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L242",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -7448,7 +6512,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L314",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -7460,7 +6524,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L173",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -7472,7 +6536,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L249",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
@@ -7484,7 +6548,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L289",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -7496,7 +6560,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L117",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -7508,7 +6572,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L321",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
@@ -7520,7 +6584,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L167",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -7532,7 +6596,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L179",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -7544,7 +6608,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L305",
+      "source_location": "L293",
       "weight": 1.0
     },
     {
@@ -7556,7 +6620,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L188",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -7568,7 +6632,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L227",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -7580,7 +6644,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L273",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -7592,43 +6656,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L236",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "parameter_type",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L98",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "target": "app_src_main_java_com_example_seall_data_model_orderitem_orderitem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "parameter_type",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "target": "app_src_main_java_com_example_seall_data_model_order_order",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "parameter_type",
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L31",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -7916,11 +6944,11 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L321",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322_create",
+      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310_create",
       "target": "t",
       "relation": "references",
       "_origin": "ast",
@@ -7928,7 +6956,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L323",
+      "source_location": "L311",
       "weight": 1.0
     },
     {
@@ -7983,7 +7011,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L84",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -7994,7 +7022,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L84",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -8203,7 +7231,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L277",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -8214,7 +7242,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L451",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -8225,7 +7253,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L71",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -8236,7 +7264,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt",
-      "source_location": "L85",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -8247,7 +7275,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L566",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -8258,7 +7286,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L627",
+      "source_location": "L493",
       "weight": 1.0
     },
     {
@@ -8269,18 +7297,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L684",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_screens_dashboardtab",
-      "target": "app_src_main_java_com_example_seall_ui_screens_dashboardtab_ingredientsbreakdowncard",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L770",
+      "source_location": "L550",
       "weight": 1.0
     },
     {
@@ -8291,7 +7308,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L83",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -8302,7 +7319,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L87",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -8313,7 +7330,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt",
-      "source_location": "L95",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -8335,7 +7352,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L465",
+      "source_location": "L458",
       "weight": 1.0
     },
     {
@@ -8346,7 +7363,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L469",
+      "source_location": "L462",
       "weight": 1.0
     },
     {
@@ -8357,7 +7374,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L534",
+      "source_location": "L527",
       "weight": 1.0
     },
     {
@@ -8483,13 +7500,13 @@
     },
     {
       "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322",
+      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L322",
+      "source_location": "L310",
       "weight": 1.0
     },
     {
@@ -8523,61 +7540,6 @@
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/util/DateUtils.kt",
       "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_productrecipesummary",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L24",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientusagesummary",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_mutableusage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L185",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -8703,6 +7665,17 @@
     },
     {
       "source": "readme_seall",
+      "target": "readme_dedication",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_seall",
       "target": "readme_features",
       "relation": "contains",
       "_origin": "ast",
@@ -8779,14 +7752,14 @@
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322",
+      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310",
+      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310",
       "relation": "implements",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L322",
+      "source_location": "L310",
       "weight": 1.0
     },
     {
@@ -9638,18 +8611,7 @@
     },
     {
       "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_toggledeductingredients",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_setdeductingredients",
+      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_openwizard",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9660,35 +8622,13 @@
     },
     {
       "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deleteordersforday",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L109",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_openwizard",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L117",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
       "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_closewizard",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L122",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -9699,7 +8639,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L127",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -9710,7 +8650,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L163",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -9721,7 +8661,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L167",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -9732,7 +8672,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L173",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -9743,7 +8683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L179",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -9754,7 +8694,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L188",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -9765,7 +8705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L196",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -9776,7 +8716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L203",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -9787,7 +8727,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L210",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
@@ -9798,7 +8738,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L218",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -9809,7 +8749,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L227",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -9820,7 +8760,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L236",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -9831,7 +8771,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L242",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -9842,7 +8782,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L249",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
@@ -9853,7 +8793,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L256",
+      "source_location": "L244",
       "weight": 1.0
     },
     {
@@ -9864,7 +8804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L273",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -9875,7 +8815,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L289",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -9886,7 +8826,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L296",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -9897,7 +8837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L305",
+      "source_location": "L293",
       "weight": 1.0
     },
     {
@@ -9908,7 +8848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L314",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -9919,18 +8859,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L321",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322",
-      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l322_create",
+      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel",
+      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_deleteordersforday",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
-      "source_location": "L323",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310",
+      "target": "app_src_main_java_com_example_seall_ui_viewmodel_orderviewmodel_orderviewmodel_providefactory_object_factory_l310_create",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt",
+      "source_location": "L311",
       "weight": 1.0
     },
     {
@@ -10088,138 +9039,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculatetotalordersingredientscost",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L114",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeingredientusages",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_computeproductrecipesummaries",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_resolveorderitems",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_findingredientsfororderitem",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper",
-      "target": "app_src_main_java_com_example_seall_util_ingredientcosthelper_ingredientcosthelper_calculateorderingredientscost",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt",
-      "source_location": "L98",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculateorderingredientscost_withitemsjson",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculateorderingredientscost_fallbackitemssummary",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcomputeingredientusages",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcomputeproductrecipesummaries",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L55",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testcalculatetotalordersingredientscost_multipleorders",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest",
-      "target": "app_src_test_java_com_example_seall_util_ingredientcosthelpertest_ingredientcosthelpertest_testproductwithoutingredients",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt",
-      "source_location": "L83",
-      "weight": 1.0
-    },
-    {
       "source": "app_src_main_java_com_example_seall_ui_screens_mainscreen_mainscreen",
       "target": "app_src_main_java_com_example_seall_ui_screens_hometab_hometab",
       "relation": "calls",
@@ -10228,7 +9047,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L419",
+      "source_location": "L418",
       "weight": 1.0
     },
     {
@@ -10240,7 +9059,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L429",
+      "source_location": "L428",
       "weight": 1.0
     },
     {
@@ -10252,7 +9071,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L439",
+      "source_location": "L434",
       "weight": 1.0
     },
     {
@@ -10264,10 +9083,10 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt",
-      "source_location": "L447",
+      "source_location": "L440",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "91a01e3d002429eb8cad9977d6bdff29380e0eae"
+  "built_at_commit": "d70dc6b5331973b76e9631b98501fbd4cd0f20e6"
 }

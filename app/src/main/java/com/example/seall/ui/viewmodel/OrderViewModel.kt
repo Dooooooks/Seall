@@ -94,6 +94,18 @@ class OrderViewModel(
     private val _editingOrder = MutableStateFlow<Order?>(null)
     val editingOrder: StateFlow<Order?> = _editingOrder.asStateFlow()
 
+    // Revenue Calculation Preference: Subtract Ingredients from Revenue
+    private val _deductIngredients = MutableStateFlow(true)
+    val deductIngredients: StateFlow<Boolean> = _deductIngredients.asStateFlow()
+
+    fun toggleDeductIngredients() {
+        _deductIngredients.value = !_deductIngredients.value
+    }
+
+    fun setDeductIngredients(deduct: Boolean) {
+        _deductIngredients.value = deduct
+    }
+
     fun deleteOrdersForDay(startOfDay: Long, endOfDay: Long) {
         viewModelScope.launch {
             repository.deleteOrdersInDateRange(startOfDay, endOfDay)

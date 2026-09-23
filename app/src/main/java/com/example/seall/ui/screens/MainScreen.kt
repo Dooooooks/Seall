@@ -113,6 +113,7 @@ fun MainScreen(
     val stocks by viewModel.stocks.collectAsState()
     val ingredients by viewModel.ingredients.collectAsState()
     val stockIngredients by viewModel.stockIngredients.collectAsState()
+    val deductIngredients by viewModel.deductIngredients.collectAsState()
 
     // ── Sidebar: Backup import confirmation state ──────────────────────────
     var pendingImportOrders by remember { mutableStateOf<List<Order>?>(null) }
@@ -428,12 +429,18 @@ fun MainScreen(
                     AppTab.DASHBOARD -> DashboardTab(
                         allOrders = orders,
                         allIngredients = ingredients,
+                        stocks = stocks,
+                        stockIngredients = stockIngredients,
+                        deductIngredients = deductIngredients,
+                        onToggleDeductIngredients = { viewModel.toggleDeductIngredients() },
                         onMarkAsPaid = { viewModel.togglePayment(it) },
                         onImportOrders = { viewModel.importOrders(it) }
                     )
                     AppTab.ARCHIVES -> ArchivesTab(
                         allOrders = orders,
                         allIngredients = ingredients,
+                        stocks = stocks,
+                        stockIngredients = stockIngredients,
                         onDeleteArchive = { start, end -> viewModel.deleteOrdersForDay(start, end) },
                         onTogglePaid = { viewModel.togglePayment(it) }
                     )

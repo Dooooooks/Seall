@@ -1,8 +1,8 @@
 {
   "app/build.gradle.kts": {
-    "mtime": 1790170813.9078074,
-    "seen": 1790171127.749258,
-    "ast_hash": "1abefb10553dac4c0b8663819ef11afe",
+    "mtime": 1789994364.9001257,
+    "seen": 1789996955.1780207,
+    "ast_hash": "84f681ab802dabb968191202f5cf3c87",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/MainActivity.kt": {
@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/viewmodel/OrderViewModel.kt": {
-    "mtime": 1790170851.5690415,
-    "seen": 1790171127.7492938,
-    "ast_hash": "6b9a57ab49b49a750b79084d31fe460e",
+    "mtime": 1789999660.21167,
+    "seen": 1789999877.5149624,
+    "ast_hash": "54fe27db8648ecdce32e145efb10d904",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/components/OrderCard.kt": {
@@ -108,9 +108,9 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/DashboardTab.kt": {
-    "mtime": 1790171021.4910045,
-    "seen": 1790171127.749286,
-    "ast_hash": "53a865466b3df9c3dfbc7319b778016c",
+    "mtime": 1789999727.0839407,
+    "seen": 1789999877.5149562,
+    "ast_hash": "91477f1cf122f1afc284f20ba1a79b43",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/HomeTab.kt": {
@@ -120,9 +120,9 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/MainScreen.kt": {
-    "mtime": 1790171079.6093047,
-    "seen": 1790171127.749288,
-    "ast_hash": "e85b1bb4d6e838fca5f557358e52e05f",
+    "mtime": 1790003838.9372025,
+    "seen": 1790003846.8093731,
+    "ast_hash": "c52e09ac8a43b3d42418b07b1dfb3287",
     "semantic_hash": ""
   },
   "app/src/main/res/drawable/seal_icon.jpg": {
@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/ui/screens/ArchivesTab.kt": {
-    "mtime": 1790171060.656208,
-    "seen": 1790171127.7492852,
-    "ast_hash": "e50b2c5fc4e5021622b2f1702ae61a21",
+    "mtime": 1789996882.5459013,
+    "seen": 1789996955.1780407,
+    "ast_hash": "4d9f72515f5c207246786bbeb77cd138",
     "semantic_hash": ""
   },
   "app/src/main/java/com/example/seall/util/DateUtils.kt": {
@@ -210,21 +210,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790004051.0099204,
-    "seen": 1790171127.7493007,
-    "ast_hash": "07c829edefbc124158ad9741a6c14665",
-    "semantic_hash": ""
-  },
-  "app/src/main/java/com/example/seall/util/IngredientCostHelper.kt": {
-    "mtime": 1790170772.2265384,
-    "seen": 1790171127.7492962,
-    "ast_hash": "bec77cb57007679569056725e5e3d3f7",
-    "semantic_hash": ""
-  },
-  "app/src/test/java/com/example/seall/util/IngredientCostHelperTest.kt": {
-    "mtime": 1790171106.7464404,
-    "seen": 1790171127.749297,
-    "ast_hash": "b404b4dd36a9c713ff369f1fd2e9d2ee",
+    "mtime": 1790003829.0451565,
+    "seen": 1790003832.205429,
+    "ast_hash": "a136782c7b6d820a8e428702afb5ae7b",
     "semantic_hash": ""
   }
 }
